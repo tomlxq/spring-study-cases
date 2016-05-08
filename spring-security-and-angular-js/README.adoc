@@ -1,8 +1,4 @@
-https://spring.io/guides/tutorials/spring-security-and-angular-js/[文档]
-**参考源码库**：　[https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/master/basic]
-css & js tools: http://alexo.github.io/wro4j/[wro4j]
-**参考源码库**：
-[https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/master/single]
-
-**如何增加spring boot测试**
-[line-through]#-javaagent:F:\server\jrebel\jrebel.jar -Xmx512M -Xms512M -XX:MaxPermSize=1024m -noverify#
+* `Document`: https://spring.io/guides/tutorials/spring-security-and-angular-js
+* `Open source repository`: https://github.com/spring-guides/tut-spring-security-and-angular-js.git
+* `Css & js tools`: http://alexo.github.io/wro4j/[wro4j]
+* `Spring boot test: jrebel`: -javaagent:[path]jrebel.jar -Xmx512M -Xms512M -XX:MaxPermSize=1024m -noverify#
