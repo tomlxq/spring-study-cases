@@ -1,4 +1,6 @@
+https://spring.io/guides/tutorials/spring-security-and-angular-js/[文档]
 **参考源码库**：　[https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/master/basic]
 css & js tools: http://alexo.github.io/wro4j/[wro4j]
 **参考源码库**：
 [https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/master/single]
+
