@@ -12,5 +12,7 @@
         <module>spring-security-and-angular-js</module>
         <module>bookmarks</module>
         <module>gs-rest-war</module>
+        <module>spring-internationalization</module>
+        <module>spring-mail</module>
     </modules>
 </project>
