@@ -2,3 +2,9 @@
 学习spring的测试代码
 Plan:
 https://github.com/auser/ng-newsletter-beginner-series.git
+
+深入学习微框架：Spring Boot
+http://www.infoq.com/cn/articles/microframeworks1-spring-boot
+http://www.infoq.com/articles/microframeworks1-spring-boot
+
+https://spring.io/guides/tutorials/bookmarks/
