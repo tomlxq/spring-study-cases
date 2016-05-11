@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+    <context:property-placeholder location="classpath:/config/jdbc.properties"/>
+    <!-- 自动搜索@Component , @Service , @Repository等标注的类 不搜索@Controller的类 -->
+    <!-- 自动扫描组件，这里要把web下面的 controller去除，他们是在spring3-servlet.xml中配置的，如果不去除会影响事务管理的。 -->
+    <context:component-scan base-package="com.tom" annotation-config="true">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <!-- enable autowire -->
+    <context:annotation-config/>
+    <!-- 用于持有ApplicationContext,可以使用SpringContextHolder.getBean('xxxx')的静态方法得到spring bean对象 -->
+    <bean class="com.tom.common.SpringContextHolder" lazy-init="false"/>
+    <!-- 开启AOP监听 只对当前配置文件有效 tom added on Jan 29, 2015 -->
+    <aop:aspectj-autoproxy expose-proxy="true"/>
+
+    <!-- 数据连接事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- define the SqlSessionFactory -->
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation" value="classpath:/config/SqlMapConfig.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 连接事务的注解配置 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--  配置事务传播特性 -->
+    <tx:advice id="transAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="insert*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="del*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="find*" propagation="REQUIRED"/>
+            <tx:method name="get*" propagation="REQUIRED"/>
+            <tx:method name="apply*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--  配置参与事务的类 -->
+    <aop:config>
+        <aop:pointcut id="allServiceMethod" expression="execution(* com.tom.service.*.*(..))"/>
+        <aop:advisor pointcut-ref="allServiceMethod" advice-ref="transAdvice" />
+    </aop:config>
+    <import resource="classpath:/config/spring-pool.xml"/>
+</beans>
