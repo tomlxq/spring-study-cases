@@ -4,22 +4,43 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-
-   <!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"/>-->
-
     <package name="default" extends="struts-default">
+        <result-types>
+            <result-type name="excel" class="com.tom.common.view.ExcelResult"/>
+        </result-types>
 
+        <interceptors>
+            <interceptor name="AI" class="com.tom.web.interceptor.RightsInterceptor"/>
+            <interceptor name="CI" class="com.tom.web.interceptor.ClientInterceptor"/>
+            <interceptor-stack name="baseDefault">
+                <interceptor-ref name="autowiring"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+            <interceptor-stack name="arStack"> <!-- 后端拦截器-->
+                <interceptor-ref name="autoWireDefault"/>
+                <interceptor-ref name="AI"/>
+            </interceptor-stack>
+            <interceptor-stack name="autoWireDefault"> <!-- 前端拦截器-->
+                <interceptor-ref name="baseDefault"/>
+                <interceptor-ref name="CI"/>
+            </interceptor-stack>
+
+
+            <interceptor-stack name="fileUploadStack">
+                <interceptor-ref name="autoWireDefault"/>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="basicStack"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="baseDefault"/>
         <default-action-ref name="index" />
-
         <action name="index" class="com.tom.IndexAction">
-            <result>/WEB-INF/jsp/index.jsp</result>
+            <result name="success" type="freemarker">/WEB-INF/template/index.ftl</result>
         </action>
-
         <action name="helloWorld" class="helloWorldAction">
             <result name="input">/jsp/index.jsp</result>
             <result>/WEB-INF/jsp/helloWorld.jsp</result>
         </action>
-
     </package>
     <include file="config/struts/account.xwork.xml"/>
 </struts>

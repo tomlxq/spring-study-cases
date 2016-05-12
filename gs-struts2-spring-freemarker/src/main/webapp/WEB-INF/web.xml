@@ -24,7 +24,7 @@
             org.springframework.web.context.request.RequestContextListener
         </listener-class>
     </listener>
-    <filter>
+   <!-- <filter>
         <filter-name>gzip</filter-name>
         <filter-class>com.caucho.filters.GzipFilter</filter-class>
         <init-param>
@@ -35,7 +35,7 @@
     <filter-mapping>
         <filter-name>gzip</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     <!-- Filters -->
     <filter>
         <filter-name>setCharacterEncoding</filter-name>

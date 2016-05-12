@@ -15,8 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class RightsFilter implements Filter {
     private Logger logger = LoggerFactory.getLogger(RightsFilter.class);
@@ -54,14 +52,13 @@ public class RightsFilter implements Filter {
         //response.setContentType("text/html;charset=UTF-8");
         String uri = request.getRequestURI(); //请求入口地址
         String url = request.getRequestURL().toString();
-        Pattern pattern = Pattern.compile("/^(.+\\/client\\/.+)|(.+\\.vectologo\\.com.*)|(.+\\.ambiancia\\.com.*)|(.+\\/packweb\\/.+)$/");
-        Matcher matcher = pattern.matcher(url);
-        String adminLoginUrl=request.getContextPath() + "/services/people/login";
+        logger.debug("{} {}",uri,url);
+        String adminLoginUrl=request.getContextPath() + "/admin/account/login.action";
         if (StringUtils.equals(uri, "/")) {
-          response.sendRedirect(adminLoginUrl);
+          response.sendRedirect("/index.action");
+            return;
         }
         String suffix = FilenameUtils.getExtension(uri);
-        // String suffix = FilenameUtils.getExtension(uri);
         if (ArrayUtils.contains(suffixURI, suffix)) { //只对这两种文件作权限检查   *.htm也是action但不需要权限
             if (StringUtils.startsWith(uri, "/admin/"))  //如果是来自客户端的访问
             {     //如果是来自内部人员访问的访问
@@ -85,10 +82,10 @@ public class RightsFilter implements Filter {
 
     private void redirectLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String requestUri = request.getRequestURI() + (request.getQueryString() == null ? "" : "?" + request.getQueryString());
-        if (StringUtils.isNotEmpty(requestUri) && StringUtils.contains(requestUri, "/services/people/logout")) {
+        if (StringUtils.isNotEmpty(requestUri) && StringUtils.contains(requestUri, "/admin/account/logout")) {
             requestUri = "";
         }
-        response.sendRedirect(request.getContextPath() + "/services/people/login?login_referer=" + StringUtil.base64Encode(requestUri));
+        response.sendRedirect(request.getContextPath() + "/admin/account/login?login_referer=" + StringUtil.base64Encode(requestUri));
     }
 
 

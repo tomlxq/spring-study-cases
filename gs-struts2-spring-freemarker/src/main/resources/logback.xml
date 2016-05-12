@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
     <!-- 日志存放的路径 ,默认为tomcat下面的logs -->
-    <property name="USER_HOME" value="../log/"/>
+    <property name="USER_HOME" value="../../log/"/>
     <!-- 输出到窗口 -->
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder><!--%logger-->

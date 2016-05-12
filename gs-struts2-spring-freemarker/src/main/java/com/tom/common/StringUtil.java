@@ -1,12 +1,23 @@
 package com.tom.common;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.UUID;
 
 /**
  * Created by tom on 2016/5/11.
  * 常用的字符串处理包
  */
 public class StringUtil {
+    public static String getUUID() {
+        return StringUtils.replace(UUID.randomUUID().toString(), "-", "");
+    }
+
+    public static String random(int size) {
+        return RandomStringUtils.randomAlphanumeric(size);
+    }
     /**
      * Base64编码.
      */

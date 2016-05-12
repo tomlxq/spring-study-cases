@@ -112,7 +112,7 @@
             </props>
         </property>
         <property name="templateLoaderPath">
-            <value>/WEB-INF/classes/template/</value>
+            <value>/WEB-INF/template/</value>
         </property>
         <property name="freemarkerVariables">
             <map>
@@ -133,37 +133,12 @@
     <bean id="decode" class="com.tom.common.freemarker.TemplateMethodModelBase64Decode"/>
     <bean id="random" class="com.tom.common.freemarker.TemplateMethodModelRandom"/>
     <bean id="acceptLanguage" class="com.tom.common.freemarker.TemplateMethodModelLang"/>
-    <!-- 针对类、方法级别的权限拦截器 -->
-    <!-- <mvc:interceptors>
-         <mvc:interceptor>
-             &lt;!&ndash; <mvc:mapping path="/fileupload" /> &ndash;&gt;
-             <mvc:mapping path="/admin*"/>
-             <mvc:mapping path="/header*"/>
-             <mvc:mapping path="/welcome*"/>
-             <mvc:mapping path="/treeMenu*"/>
-             <mvc:mapping path="/role**/**"/>
- &lt;!&ndash;            <mvc:mapping path="/user**/**"/>&ndash;&gt;
-             <mvc:mapping path="/module**/**"/>
-             <mvc:mapping path="/field**/**"/>
-             <bean class="fr.databao.web.interceptor.AuthorityAnnotationInterceptor"/>
-             &lt;!&ndash;<bean class="fr.databao.web.interceptor.LoginInterceptor"/>&ndash;&gt;
-         </mvc:interceptor>
-     </mvc:interceptors>-->
+
     <mvc:interceptors>
-        <bean class="fr.databao.web.interceptor.AuthorityAnnotationInterceptor"></bean>
-        <bean class="fr.databao.web.interceptor.ClientAuthorityAnnotationInterceptor"></bean>
+        <bean class="com.tom.web.interceptor.AuthorityAnnotationInterceptor"></bean>
+        <bean class="com.tom.web.interceptor.ClientAuthorityAnnotationInterceptor"></bean>
     </mvc:interceptors>
-    <!-- <mvc:interceptors>
-         <mvc:interceptor>
-             <mvc:mapping path="/services/**"/>
-             <bean class="fr.databao.web.interceptor.AuthorityAnnotationInterceptor"></bean>
-         </mvc:interceptor>
-     </mvc:interceptors>-->
-    <!--开发期间注释掉，上线后启用 错误解析器 发生错误默认会跳转到/web-inf/views/timeout.jsp -->
-    <!-- <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"> <property name="defaultErrorView"
-        value="timeout" /> <property name="exceptionMappings"> <props> <prop key="java.sql.SQLException">timeout</prop> <prop key="java.lang.RuntimeException">timeout</prop>
-        <prop key="org.springframework.transaction.TransactionException">timeout</prop> <prop key="org.springframework.dao.DataAccessException">timeout</prop>
-        </props> </property> </bean> -->
+
 
     <!-- 国际化,并且可以批定文件编码,可以使用classpath: 或者WEB-INF/ 前缀 -->
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
