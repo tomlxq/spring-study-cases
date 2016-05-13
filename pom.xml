@@ -14,6 +14,5 @@
         <module>gs-rest-war</module>
         <module>spring-internationalization</module>
         <module>spring-mail</module>
-        <module>gs-struts2-spring-freemarker</module>
     </modules>
 </project>
