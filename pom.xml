@@ -14,5 +14,7 @@
         <module>gs-rest-war</module>
         <module>spring-internationalization</module>
         <module>spring-mail</module>
+        <module>callback</module>
+        <module>proxy</module>
     </modules>
 </project>
