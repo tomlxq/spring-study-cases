@@ -16,5 +16,6 @@
         <module>spring-mail</module>
         <module>callback</module>
         <module>proxy</module>
+        <module>SerializeAndDeserialize</module>
     </modules>
 </project>
