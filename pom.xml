@@ -17,5 +17,6 @@
         <module>callback</module>
         <module>proxy</module>
         <module>SerializeAndDeserialize</module>
+<!--        <module>gs-spring-jdbc</module>-->
     </modules>
 </project>
