@@ -18,6 +18,7 @@
         <module>proxy</module>
         <module>SerializeAndDeserialize</module>
         <module>spring-mvc-demo</module>
+        <module>spring-mvc-manual</module>
         <!--        <module>gs-spring-jdbc</module>-->
     </modules>
 </project>
