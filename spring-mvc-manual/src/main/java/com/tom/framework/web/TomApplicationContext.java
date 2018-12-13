@@ -26,10 +26,11 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TomApplicationContext {
 
     private List<String> listClass = Lists.newArrayList();
-
+    Properties config = new Properties();
     private Map<String, Object> instanceMapping = new ConcurrentHashMap<String, Object>() {
     };
-
+    private Map<String, String> ctxMap = new ConcurrentHashMap<String, String>() {
+    };
 
     public TomApplicationContext(String location) {
         try {
@@ -42,12 +43,13 @@ public class TomApplicationContext {
 
             }
             //２.加载配置文件
-            Properties config = new Properties();
+            //Properties config = new Properties();
             try {
                 config.load(is);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
             String pack = config.getProperty("base-package");
             //3.注册，仅保存类对象
             //实际spring是BeanDefinition
@@ -117,6 +119,10 @@ public class TomApplicationContext {
             }
         });
 
+    }
+
+    public Properties getConfig() {
+        return config;
     }
 
     private String lowerFirstLetter(String simpleName) {
