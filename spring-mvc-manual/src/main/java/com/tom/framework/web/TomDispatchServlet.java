@@ -67,7 +67,6 @@ public class TomDispatchServlet extends HttpServlet {
 
         String template = context.getConfig().getProperty("template");
         String dir = this.getClass().getClassLoader().getResource(template).getFile();
-        //  String  dir="F:\\data\\wwwtest\\spring-study-cases\\spring-mvc-manual\\src\\main\\webapp\\WEB-INF\\"+template;
         File file = new File(dir);
         for (File f : file.listFiles()) {
             if (f.isFile()) {
@@ -184,11 +183,9 @@ public class TomDispatchServlet extends HttpServlet {
         } catch (Exception e) {
             resp.getWriter().write("500 inner exception, msg " + Arrays.toString(e.getStackTrace()));
         }
-        // super.doPost(req, resp);
     }
 
     private void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        //HandlerExecutionChain mappedHandler = null;
         HandlerMapping mappedHandler = getHandler(request);
         if (mappedHandler == null) {
             response.getWriter().write("404 not found");
@@ -210,7 +207,6 @@ public class TomDispatchServlet extends HttpServlet {
         }
         viewResolvers.forEach(viewResolver -> {
             if (!StringUtils.equals(viewResolver.getView(), viewName)) return;
-            // ViewResolver viewResolver = viewResolvers.get(viewName);
             String html = viewResolver.parse(mv);
             try {
                 response.getWriter().write(html);
@@ -246,18 +242,7 @@ public class TomDispatchServlet extends HttpServlet {
             return this.handlerMapping.get(entry);
 
         }
-        // return this.handlerMapping.get(url);
-        //System.out.println("aaaa:"+contextPath);
-        //System.out.println("bbbb:"+requestURI);
-        //System.out.println(this.handlerMapping);;
-       /* if (this.handlerMappings != null) {
-            for (HandlerMapping mapping : this.handlerMappings) {
-                HandlerExecutionChain handler = mapping.getHandler(request);
-                if (handler != null) {
-                    return handler;
-                }
-            }
-        }*/
+
         return null;
     }
 
@@ -316,16 +301,8 @@ public class TomDispatchServlet extends HttpServlet {
         private Object controller;
         private Method method;
 
-        public HandlerExecutionChain getHandler(HttpServletRequest request) {
 
-            return null;
-        }
     }
 
-    class HandlerExecutionChain {
-        public HandlerExecutionChain getHandler() {
-            return null;
-        }
-    }
 
 }

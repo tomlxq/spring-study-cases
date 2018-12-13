@@ -43,7 +43,6 @@ public class TomApplicationContext {
 
             }
             //２.加载配置文件
-            //Properties config = new Properties();
             try {
                 config.load(is);
             } catch (IOException e) {
