@@ -19,6 +19,28 @@
         <module>SerializeAndDeserialize</module>
         <module>spring-mvc-demo</module>
         <module>spring-mvc-manual</module>
+        <module>gs-socket-demo</module>
+        <module>gs-serialize-demo</module>
+        <module>gs-rmi</module>
         <!--        <module>gs-spring-jdbc</module>-->
     </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>3.0-alpha-1</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
