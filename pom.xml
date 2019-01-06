@@ -22,6 +22,10 @@
         <module>gs-socket-demo</module>
         <module>gs-serialize-demo</module>
         <module>gs-rmi</module>
+        <module>gs-webservice</module>
+        <module>gs-webservice-client</module>
+        <module>gs-cfx-rest</module>
+        <module>gs-zookeeper</module>
         <!--        <module>gs-spring-jdbc</module>-->
     </modules>
     <dependencyManagement>
