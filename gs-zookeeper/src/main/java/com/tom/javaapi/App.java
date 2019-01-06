@@ -1,4 +1,4 @@
-package com.tom;
+package com.tom.javaapi;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
@@ -9,6 +9,7 @@ import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
@@ -34,11 +35,12 @@ public class App implements Watcher {
         //修改数据
         Stat stat1 = zooKeeper.setData("/tom", "456".getBytes(), -1);
         zooKeeper.exists("/tom", true);
-        System.out.println("创建成功：" + stat1.toString());
+        System.out.println("修改修改数据：" + stat1.toString());
         Thread.sleep(2000);
         Stat stat2 = zooKeeper.setData("/tom", "789".getBytes(), -1);
         zooKeeper.exists("/tom", true);
-        System.out.println("创建成功：" + stat2.toString());
+        System.out.println("修改修改数据：" + stat2.toString());
+        zooKeeper.delete("/tom", -1);
         Thread.sleep(2000);
         zooKeeper.create("/tom1", "123".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
         zooKeeper.exists("/tom1", true);
@@ -53,6 +55,9 @@ public class App implements Watcher {
         zooKeeper.exists("/tom2/tom2-1", true);
         zooKeeper.create("/tom2/tom2-2", "123".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
         zooKeeper.exists("/tom2/tom2-2", true);
+        //获取子节点
+        List<String> children = zooKeeper.getChildren("/tom2", true);
+        System.out.println("获取子节点数据：" + children);
         TimeUnit.SECONDS.sleep(1);
         zooKeeper.setData("/tom2/tom2-2", "456".getBytes(), -1);
         zooKeeper.exists("/tom2/tom2-2", true);
@@ -70,16 +75,16 @@ public class App implements Watcher {
                     System.out.println("->" + watchedEvent.getType());
                 }
                 if (watchedEvent.getType() == Event.EventType.NodeCreated) {
-                    System.out.println(" 节点创建后的路径：" + watchedEvent.getPath() + " 节点创建后的值：" + zooKeeper.getData(watchedEvent.getPath(), false, STAT));
+                    System.out.println(" 节点创建后的路径：" + watchedEvent.getPath() + " 节点创建后的值：" + new String(zooKeeper.getData(watchedEvent.getPath(), false, STAT)));
                 }
                 if (watchedEvent.getType() == Event.EventType.NodeDeleted) {
                     System.out.println(" 节点删除后的路径：" + watchedEvent.getPath());
                 }
                 if (watchedEvent.getType() == Event.EventType.NodeChildrenChanged) {
-                    System.out.println(" 子节点改变后的路径：" + watchedEvent.getPath() + " 子节点改变后的值：" + zooKeeper.getData(watchedEvent.getPath(), false, STAT));
+                    System.out.println(" 子节点改变后的路径：" + watchedEvent.getPath() + " 子节点改变后的值：" + new String(zooKeeper.getData(watchedEvent.getPath(), false, STAT)));
                 }
                 if (watchedEvent.getType() == Event.EventType.NodeDataChanged) {
-                    System.out.println(" 节点数据改变后的路径：" + watchedEvent.getPath() + " 节点数据改变后的值：" + zooKeeper.getData(watchedEvent.getPath(), false, STAT));
+                    System.out.println(" 节点数据改变后的路径：" + watchedEvent.getPath() + " 节点数据改变后的值：" + new String(zooKeeper.getData(watchedEvent.getPath(), false, STAT)));
                 }
                 System.out.println(watchedEvent.getType());
             } catch (KeeperException e) {
