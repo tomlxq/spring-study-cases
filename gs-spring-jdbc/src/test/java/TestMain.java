@@ -27,7 +27,7 @@ public class TestMain {
     ConfigurableApplicationContext context;
  /*try (ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class, DBProperties.class);) {
         DBProperties dbProperties = context.getBean(DBProperties.class);
-        logger.info("This is dbProperties: " + dbProperties.toString());
+        logger.spring("This is dbProperties: " + dbProperties.toString());
     }*/
 
     public static void printProperties(Properties p) {

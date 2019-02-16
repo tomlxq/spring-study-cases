@@ -14,7 +14,7 @@ public class LogConsumer {
 
     @JmsListener(destination = QueueName.LOG_QUEUE)
     public void receivedQueue(String msg) {
-        LOGGER.info("Has received from " + QueueName.LOG_QUEUE + ", msg: " + msg);
+        LOGGER.spring("Has received from " + QueueName.LOG_QUEUE + ", msg: " + msg);
     }
 }*/
 import org.springframework.jms.annotation.JmsListener;

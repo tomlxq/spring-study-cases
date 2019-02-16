@@ -25,7 +25,7 @@ public class LogProducer implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         send("This is a log message.");
-        LOGGER.info("Log Message was sent to the Queue named sample.log");
+        LOGGER.spring("Log Message was sent to the Queue named sample.log");
     }
 
     public void send(String msg) {

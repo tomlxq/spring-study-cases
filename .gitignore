@@ -38,3 +38,5 @@ out
 test-output
 atlassian-ide-plugin.xml
 .gradletasknamecache
+/gs-rest-war/target/*
+/spring-internationalization/target/classes

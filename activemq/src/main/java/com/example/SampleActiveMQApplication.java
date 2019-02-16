@@ -34,7 +34,7 @@ public class ActivemqApplication {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ActivemqApplication.class, args);
-        LOGGER.info("Server running...");
+        LOGGER.spring("Server running...");
     }
 
 }*/

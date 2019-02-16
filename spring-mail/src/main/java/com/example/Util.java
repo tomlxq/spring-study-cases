@@ -3,24 +3,16 @@ package com.example;
 /**
  * Created by tom on 2016/5/10.
  */
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeUtility;
-import javax.mail.util.ByteArrayDataSource;
-import java.io.File;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 public class Util {
@@ -113,9 +105,9 @@ public class Util {
         boolean multipart=mail.isMultipart();
         String charset=mail.getCharset();
         InternetAddress from=convert(mail.getFrom());
-        //logger.info("{}",mail);
+        //logger.spring("{}",mail);
         InternetAddress[] to=convert(mail.getTo());
-        //logger.info("{}",to);
+        //logger.spring("{}",to);
         InternetAddress replyTo=convert(mail.getReplyTo());
         InternetAddress[] cc=convert(mail.getCc());
         InternetAddress[] bcc=convert(mail.getBcc());
@@ -133,8 +125,8 @@ public class Util {
             throw new IllegalArgumentException(
                     "Please provide plainText or htmlText.");
         }
-        //logger.info("{}",validateAddress(to));
-        //logger.info("{}",validateAddress(cc));
+        //logger.spring("{}",validateAddress(to));
+        //logger.spring("{}",validateAddress(cc));
         if(!validateAddress(to) &&
                 !validateAddress(cc) &&
                 !validateAddress(bcc)) {
