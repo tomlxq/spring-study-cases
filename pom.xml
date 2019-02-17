@@ -26,11 +26,9 @@
         <module>gs-webservice-client</module>
         <module>gs-cfx-rest</module>
         <module>gs-zookeeper</module>
-        <module>gs-dubbo-order-api</module>
-        <module>gs-dubbo-order-provider</module>
+        <module>gs-dubbo-order</module>
         <module>gs-dubbo-user</module>
-        <module>gs-dubbo-user-api</module>
-        <module>gs-dubbo-user-provider</module>
+        <module>gs-dubbo-user-app</module>
         <module>gs-dubbo-app-demo</module>
         <!--        <module>gs-spring-jdbc</module>-->
     </modules>
@@ -127,16 +125,8 @@
                 <artifactId>spring-context-support</artifactId>
                 <version>5.0.5.RELEASE</version>
             </dependency>
-            <dependency>
-                <groupId>com.tom</groupId>
-                <artifactId>gs-dubbo-user-api</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tom</groupId>
-                <artifactId>gs-dubbo-order-api</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 </project>
