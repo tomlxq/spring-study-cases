@@ -28,4 +28,6 @@
     </dubbo:reference>
     <dubbo:reference interface="com.tom.IUserService" id="userServices" protocol="dubbo"/>
 
+    <!-- <dubbo:reference interface="com.tom.user.IUserService" id="userServiceX" protocol="dubbo" check="true"/>-->
+
 </beans>

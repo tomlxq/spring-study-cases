@@ -30,7 +30,9 @@
         <module>gs-dubbo-user</module>
         <module>gs-dubbo-user-app</module>
         <module>gs-dubbo-app-demo</module>
-        <!--        <module>gs-spring-jdbc</module>-->
+        <module>gs-dubbo-tx</module>
+        <module>gs-dubbo-extension</module>
+        <module>gs-bio-nio</module>
     </modules>
     <dependencyManagement>
         <dependencies>

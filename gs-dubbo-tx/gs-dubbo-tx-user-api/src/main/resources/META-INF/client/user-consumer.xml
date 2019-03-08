@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+
+            http://code.alibabatech.com/schema/dubbo
+            http://code.alibabatech.com/schema/dubbo/dubbo.xsd" default-autowire="byName">
+    <!--    <context:annotation-config/>
+        <dubbo:application name="gs-dubbo-tx-order-api" owner="tom"/>-->
+    <dubbo:reference interface="com.tom.user.IUserService" id="userService" protocol="dubbo" check="true"/>
+
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+
+            http://code.alibabatech.com/schema/dubbo
+            http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="gs-dubbo-extension" owner="tom"/>
+    <dubbo:monitor protocol="registry"/>
+    <dubbo:registry id="zk"
+                    address="zookeeper://192.168.238.105?backup=192.168.238.110,192.168.238.115,192.168.238.120"/>
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:service interface="com.tom.IPayService" registry="zk" ref="payService"/>
+    <bean id="payService" class="com.tom.PayServiceImpl"/>
+</beans>

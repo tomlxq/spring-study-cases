@@ -46,6 +46,21 @@ public class App {
         System.out.println(res);
         System.in.read();
 
+        /*ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/client/order-consumer.xml");
 
+        IOrderService serviceV2 = (IOrderService) context.getBean("orderService");
+        DoOrderRequest   request = new DoOrderRequest();
+        request.setName("jack");
+        DoOrderResponse response = serviceV2.doOrder(request);
+        System.out.println(response);*/
+
+
+        /*ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/client/user-consumer.xml");
+
+        com.tom.user.IUserService serviceV2 = (com.tom.user.IUserService) context.getBean("userService");
+        DoRechargeRequest request = new DoRechargeRequest();
+        request.setName("jack");
+        DoRechargeResponse response = serviceV2.doRecharge(request);
+        System.out.println(response);*/
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+
+            http://code.alibabatech.com/schema/dubbo
+            http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--    <context:annotation-config/>
+        <context:component-scan base-package="com.tom.user"/>-->
+    <!--当前分布器架构里唯一的名称，计算依赖关系的标签-->
+    <dubbo:application name="${dubbo.application.name}" owner="${dubbo.application.owner}"/>
+    <!--dubbo这个服务所要暴露的服务地址所对应的注册中心-->
+    <!--<dubbo:registry address="N/A"/>-->
+    <dubbo:registry address="${dubbo.zk.servers}" group="${dubbo.zk.group}"
+                    file="${dubbo.cache.dir}/dubbo-user.cache"/>
+    <!--当前服务所依赖的协议：webservice,thrift,hessian,http-->
+    <dubbo:protocol name="dubbo" port="${dubbo.service.provider.port}"
+                    threadpool="cached" threads="${dubbo.service.provider.threads:200}"
+                    accesslog="${dubbo.protocal.accesslog}"/>
+</beans>
