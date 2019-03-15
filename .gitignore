@@ -38,6 +38,7 @@ out
 test-output
 atlassian-ide-plugin.xml
 .gradletasknamecache
-/gs-rest-war/target/*
-/spring-internationalization/target/*
-/gs-dubbo-app-demo/.mvn/wrapper
+/gs-*/target/*
+/spring-*/target/*
+/gs-*/.mvn
+.ideaDataSources
