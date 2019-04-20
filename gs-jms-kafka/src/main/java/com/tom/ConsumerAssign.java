@@ -5,16 +5,17 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.TopicPartition;
 
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-public class ConsumerBatch extends ShutdownableThread {
+public class ConsumerAssign extends ShutdownableThread {
     private KafkaConsumer<Integer, String> consumer = null;
     List<ConsumerRecord> list = null;
 
-    public ConsumerBatch() {
+    public ConsumerAssign() {
         super("KafkaConsumerTest", false);
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, Constants.KAFKA_BROKER_LIST);
@@ -30,12 +31,15 @@ public class ConsumerBatch extends ShutdownableThread {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerDeserializer");
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
         this.consumer = new KafkaConsumer<Integer, String>(props);
+        //指定消费的分区
+        TopicPartition p0 = new TopicPartition(Constants.TOPIC, 0);
+        this.consumer.assign(Arrays.asList(p0));
     }
 
     @Override
     public void doWork() {
-        this.consumer.subscribe(Collections.singletonList(Constants.TOPIC));
-
+        //与这个是互拆
+        //this.consumer.subscribe(Collections.singletonList(Constants.TOPIC));
         ConsumerRecords<Integer, String> polls = this.consumer.poll(1000);
         for (ConsumerRecord record : polls) {
             System.out.printf("partition [" + record.partition() + "],key=[" + record.key() + "],value=[" + record.value() + "],offset=" + record.offset() + "");
@@ -50,7 +54,7 @@ public class ConsumerBatch extends ShutdownableThread {
     }
 
     public static void main(String[] args) {
-        ConsumerBatch kafkaConsumer = new ConsumerBatch();
+        ConsumerAssign kafkaConsumer = new ConsumerAssign();
         kafkaConsumer.start();
     }
 }

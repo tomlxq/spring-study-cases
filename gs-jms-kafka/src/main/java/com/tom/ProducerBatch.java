@@ -18,22 +18,6 @@ public class ProducerBatch implements Runnable {
 
         this.producer = new KafkaProducer<Integer, String>(props);
     }
-
-    public static void main(String[] args) {
-        ProducerBatch kafkaProducer = new ProducerBatch();
-        new Thread(kafkaProducer).start();
-    }
-
-    private void sendMsg() {
-        producer.send(new ProducerRecord<Integer, String>(Constants.TOPIC, 1, "value"), new Callback() {
-            @Override
-            public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-                System.out.printf("Message send to [" + recordMetadata.partition() + "],offset [" + recordMetadata.offset() + "]");
-            }
-        });
-
-    }
-
     @Override
     public void run() {
         int messageNo = 0;
@@ -48,4 +32,13 @@ public class ProducerBatch implements Runnable {
             messageNo++;
         }
     }
+
+    public static void main(String[] args) {
+        ProducerBatch kafkaProducer = new ProducerBatch();
+        new Thread(kafkaProducer).start();
+    }
+
+
+
+
 }

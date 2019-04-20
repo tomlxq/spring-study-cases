@@ -31,7 +31,7 @@ public class Producer {
                 System.out.printf("Message send to ["+recordMetadata.partition()+"],offset ["+recordMetadata.offset()+"]");
             }
         });
-
+        System.out.println("发送完成");
     }
 
 }
