@@ -12,7 +12,7 @@ import java.util.Properties;
 public class Consumer extends ShutdownableThread {
     private KafkaConsumer<Integer,String> consumer=null;
     public Consumer() {
-        super("KafkaComsumerTest", false);
+        super("KafkaConsumerTest", false);
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,Constants.KAFKA_BROKER_LIST);
         //GroupId所属的分组
