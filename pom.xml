@@ -46,6 +46,7 @@
         <module>gs-netty-rpc</module>
         <module>gs-jms-activemq</module>
         <module>gs-ecommerce</module>
+        <module>gs-jms-kafka</module>
     </modules>
     <dependencyManagement>
         <dependencies>
