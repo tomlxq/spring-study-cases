@@ -47,6 +47,9 @@
         <module>gs-jms-activemq</module>
         <module>gs-ecommerce</module>
         <module>gs-jms-kafka</module>
+        <module>gs-redis</module>
+        <module>gs-ecommerce-parent</module>
+        <module>gs-ecommerce</module>
     </modules>
     <dependencyManagement>
         <dependencies>
