@@ -127,3 +127,7 @@ mvn archetype:create -DgroupId=oschina -DartifactId=simple -DpackageName=net.osc
 </pluginRepositories>
 ```
 执行maven update更新一下即可。
+首先，先到官网去下载maven。这里是官网的地址：http://maven.apache.org/download.cgi  请选择最新的版本下载
+新建系统变量   MAVEN_HOME  变量值：D:\Java\apache-maven-3.1.1
+编辑系统变量  Path         添加变量值： ;%MAVEN_HOME%\bin
+最后检验配置是否成功：用win键+R，来打开命令行提示符窗口，即Dos界面，输入mvn --version  若出现以下情况说明配置成功
