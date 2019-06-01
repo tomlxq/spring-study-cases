@@ -6,7 +6,25 @@
 
     <groupId>com.tom</groupId>
     <artifactId>spring-study-cases</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>2.0.0</version>
+
+
+
+    <!--<dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.6.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,10 +32,10 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
         <spring.version>[5.0.7,)</spring.version>
-    </properties>
+    </properties>-->
 
     <modules>
-        <module>spring-security-and-angular-js</module>
+        <!--<module>spring-security-and-angular-js</module>
         <module>bookmarks</module>
         <module>gs-rest-war</module>
         <module>spring-internationalization</module>
@@ -48,12 +66,36 @@
         <module>gs-ecommerce</module>
         <module>gs-jms-kafka</module>
         <module>gs-redis</module>
-        <module>gs-ecommerce-parent</module>
-        <module>gs-ecommerce</module>
+        <module>gs-ecommerce</module>-->
+
+        <module>gs-spring-mongo</module>
+        <module>gs-spring-mult-mongodb</module>
+        <module>gs-spring-boot-todo</module>
     </modules>
-    <dependencyManagement>
+   <!-- <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!--<dependencyManagement>
         <dependencies>
-            <!--spring核心包-->
+            &lt;!&ndash;spring核心包&ndash;&gt;
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
@@ -99,7 +141,7 @@
                 <artifactId>spring-jms</artifactId>
                 <version>${spring.version}</version>
             </dependency>
-            <!--mybatis-->
+            &lt;!&ndash;mybatis&ndash;&gt;
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
@@ -110,7 +152,7 @@
                 <artifactId>mybatis-spring</artifactId>
                 <version>1.3.2</version>
             </dependency>
-            <!--mysql-->
+            &lt;!&ndash;mysql&ndash;&gt;
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -153,7 +195,7 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.7</version>
             </dependency>
-            <!--排除依赖-->
+            &lt;!&ndash;排除依赖&ndash;&gt;
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
@@ -220,5 +262,5 @@
                 <version>1.2.17</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+    </dependencyManagement>-->
 </project>
