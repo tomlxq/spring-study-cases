@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.controller;
 
 
-import com.example.demo.domain.Person;
+import com.example.domain.Person;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;

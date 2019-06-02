@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.controller;
 
 import com.tom.order.DoOrderRequest;
 import com.tom.order.DoOrderResponse;

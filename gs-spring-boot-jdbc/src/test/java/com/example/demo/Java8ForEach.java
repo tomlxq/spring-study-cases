@@ -1,12 +1,10 @@
 package com.example.demo;
 
 
-import com.example.demo.domain.Person;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.IntSummaryStatistics;
 import java.util.Iterator;
@@ -167,13 +165,6 @@ public class Java8ForEach {
         // return if (text != null) ? text.length() : -1;
     }
 
-    @Test
-    public void test2() {
-        //使用String默认的排序规则，比较的是Person的name字段
-        Comparator<Person> byName = Comparator.comparing(p -> p.getName());
-        //不用写传入参数,传入的用Person来声明
-        Comparator<Person> byName2 = Comparator.comparing(Person::getName);
-    }
 
     @Test
     public void test() {
