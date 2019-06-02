@@ -6,9 +6,6 @@ import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import org.junit.Test;
 
-import static com.Constants.DB_NAME;
-import static com.Constants.HOST;
-import static com.Constants.PORT;
 
 public class TestMongo {
 

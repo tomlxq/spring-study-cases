@@ -1,6 +1,7 @@
 package com.example.demo.jdbc.framework;
 
-import com.tom.demo.utils.EntityClassUtils;
+
+import com.example.demo.utils.EntityClassUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -174,7 +175,7 @@ class EntityOperation<T> {
         }
         Object value = null;
         try {
-            t = (T) entityClass.newInstance();
+            t = entityClass.newInstance();
             for (String columnName : mappings.keySet()) {
                 try {
                     value = rs.getObject(columnName);

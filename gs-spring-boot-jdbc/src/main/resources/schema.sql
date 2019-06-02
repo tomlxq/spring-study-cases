@@ -1,4 +1,5 @@
-CREATE DATABASE if not exists `test` CHARACTER SET utf8 COLLATE utf8_bin;
+CREATE DATABASE if not exists `demo` CHARACTER SET utf8 COLLATE utf8_bin;
+drop table if exists `t_student`;
 CREATE TABLE `t_student`
 (
     `ID`         int(10)      NOT NULL AUTO_INCREMENT,

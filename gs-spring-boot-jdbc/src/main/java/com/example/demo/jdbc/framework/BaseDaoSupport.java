@@ -1,7 +1,7 @@
 package com.example.demo.jdbc.framework;
 
-import com.tom.demo.jdbc.tools.Page;
-import com.tom.demo.utils.GenericsUtils;
+import com.example.demo.jdbc.tools.Page;
+import com.example.demo.utils.GenericsUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -223,7 +223,7 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 
 
                     for (int i = 0; i < values.size(); i++) {
-                        ps.setObject(i + 1, values.get(i) == null ? null : values.get(i));
+                        ps.setObject(i + 1, values.get(i));
 
                     }
                     return ps;

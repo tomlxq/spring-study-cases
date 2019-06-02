@@ -1,9 +1,18 @@
 package com.example.demo;
 
-import com.example.usebean.Person;
+
+import com.example.demo.domain.Person;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.IntSummaryStatistics;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -59,7 +68,6 @@ public class Java8ForEach {
         // 不可改变元有对象
         list.forEach(i -> i = i * 3);
         list.forEach(System.out::println);
-        ;
     }
 
     @Test
@@ -202,7 +210,7 @@ public class Java8ForEach {
         map.forEach((k, v) -> {
             System.out.println(v);
         });
-        List<String> list = new ArrayList<String>(Arrays.asList(new String[]{"zhangshan", "lishi"}));
+        List<String> list = new ArrayList<String>(Arrays.asList("zhangshan", "lishi"));
         list.forEach(k -> {
             System.out.println(k);
         });
@@ -211,6 +219,5 @@ public class Java8ForEach {
                 .forEach(idx ->
                         System.out.println(idx + list.get(idx)
                         ));
-        ;
     }
 }

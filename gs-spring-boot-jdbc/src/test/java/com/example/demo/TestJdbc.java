@@ -4,13 +4,12 @@ import com.alibaba.fastjson.JSON;
 import com.example.demo.config.AppRootConfig;
 import com.example.demo.dao.AccountDao;
 import com.example.demo.domain.Account;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -36,7 +35,7 @@ public class TestJdbc {
     public void test2() {
 
 
-        SimpleJdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateWrite();
+        JdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateWrite();
         String sql = "UPDATE account SET name=?, money=? "
                 + " WHERE id=?";
         jdbcTemplate.update(sql, "jack", 288l, 1l);
@@ -47,7 +46,7 @@ public class TestJdbc {
 
     @Test
     public void test3() {
-        SimpleJdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateWrite();
+        JdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateWrite();
 
         String sql = "DELETE FROM account WHERE id=?";
         jdbcTemplate.update(sql, 1);
@@ -56,7 +55,7 @@ public class TestJdbc {
 
     @Test
     public void test4() {
-        SimpleJdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateReadOnly();
+        JdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateReadOnly();
         String sql = "SELECT * FROM account";
         List<Account> listContact = jdbcTemplate.query(sql, new RowMapper<Account>() {
 
@@ -77,7 +76,7 @@ public class TestJdbc {
 
     @Test
     public void test5() {
-        SimpleJdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateReadOnly();
+        JdbcTemplate jdbcTemplate = accountDao.getJdbcTemplateReadOnly();
         String sql = "SELECT * FROM account where id=2";
         Account account = jdbcTemplate.queryForObject(sql, new RowMapper<Account>() {
 
