@@ -10,7 +10,6 @@
     <version>2.0.0</version>
 
 
-
     <!--<dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -67,19 +66,19 @@
         <module>gs-jms-kafka</module>
         <module>gs-redis</module>
         <module>gs-ecommerce</module>-->
-
+        <module>gs-spring-boot-jdbc</module>
+        <module>gs-spring-boot-mybatis</module>
         <module>gs-spring-mongo</module>
         <module>gs-spring-mult-mongodb</module>
-        <module>gs-spring-boot-todo</module>
     </modules>
-   <!-- <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>-->
+    <!-- <dependencies>
+         <dependency>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
+             <version>1.18.8</version>
+             <scope>compile</scope>
+         </dependency>
+     </dependencies>-->
     <build>
         <plugins>
             <plugin>

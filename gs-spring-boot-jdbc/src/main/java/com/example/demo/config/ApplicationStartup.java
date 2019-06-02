@@ -16,7 +16,6 @@ public class ApplicationStartup implements ApplicationRunner {
       //  LOGGER.info("系统启动时，作初始化的动作");
    // }
 
-    @Override
     public void run(ApplicationArguments args) throws Exception {
         LOGGER.info("系统启动时，作初始化的动作");
     }
