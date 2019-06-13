@@ -1,17 +1,22 @@
-  
-一、springMVC入口 
+[TOC]
+
+
+
+## 一、springMVC入口 
+
 ```
 WebMvcConfigurer
 EnableWebMvc
 DelegatingWebMvcConfiguration
 WebMvcConfigurationSupport
 ```
-二、媒体类型
+## 二、媒体类型
+
 ```
 org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport
 ```
 处理媒体类型的类
-```
+```java
 static {
 	ClassLoader classLoader = WebMvcConfigurationSupport.class.getClassLoader();
 	romePresent = ClassUtils.isPresent("com.rometools.rome.feed.WireFeed", classLoader);
@@ -25,7 +30,7 @@ static {
 }
 ```
 默认类型
-```
+```java
 protected Map<String, MediaType> getDefaultMediaTypes() {
 	Map<String, MediaType> map = new HashMap(4);
 	if (romePresent) {
@@ -52,12 +57,14 @@ protected Map<String, MediaType> getDefaultMediaTypes() {
 	return map;
 }
 ```
-三、修改POM文件，展示XML类型
+## 三、修改POM文件，展示XML类型
+
 由于XML的处理类型，默认是没有引进来的com.fasterxml.jackson.dataformat.xml.XmlMapper
 通过查询类的引入包，引入相关的包
 https://search.maven.org/classic/#advancedsearch
 在POM文件中加入
-```
+
+```xml
 <dependency>
 	<groupId>com.fasterxml.jackson.dataformat</groupId>
 	<artifactId>jackson-dataformat-xml</artifactId>
@@ -65,10 +72,37 @@ https://search.maven.org/classic/#advancedsearch
 </dependency>
 ```
 重启应用后，可以看到http://localhost:8080/person/1?name=tom，展示的为XML形式
-```
+```xml
 <Person>
 	<id>1</id>
 	<name>tom</name>
 	<location/>
 </Person>
 ```
+
+## 四、修改配置，返回默认的类型
+
+1. ### 修改返回XML类型
+
+```java
+@Configuration
+public class WebConfiguration implements WebMvcConfigurer {
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        converters.set(0,new MappingJackson2XmlHttpMessageConverter());
+    }
+}
+```
+2. ### 修改返回JSON类型
+```java
+@Configuration
+public class WebConfiguration implements WebMvcConfigurer {
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        converters.set(0,new MappingJackson2HttpMessageConverter());
+    }
+}
+```
+
+## 五、自描述消息处理
+

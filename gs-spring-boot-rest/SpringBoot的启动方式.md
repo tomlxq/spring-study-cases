@@ -12,7 +12,7 @@
 关于Tomcat的属性都在org.springframework.boot.autoconfigure.web.ServerProperties配置类中做了定义，我们只需在application.properties配置属性做配置即可。通用的Servlet容器配置都已”server”左右前缀，而Tomcat特有配置都以”server.tomcat”作为前缀。下面举一些常用的例子。
 
 配置Servlet容器：
-```
+```properties
 #配置程序端口，默认为8080
 server.port= 8080
 #用户绘画session过期时间，以秒为单位
@@ -21,7 +21,7 @@ server.session.timeout=
 server.context-path=
 ```
 配置Tomcat：
-```
+```properties
 # 配置Tomcat编码,默认为UTF-8
 server.tomcat.uri-encoding=UTF-8
 # 配置最大线程数
@@ -32,7 +32,8 @@ server.tomcat.max-threads=1000
 配置步骤：
 1、继承SpringBootServletInitializer
 外部容器部署的话，就不能依赖于Application的main函数了，而是要以类似于web.xml文件配置的方式来启动Spring应用上下文，此时我们需要在启动类中继承SpringBootServletInitializer并实现configure方法：
-```
+
+```java
 @SpringBootApplication
 public class Chapter05Application extends SpringBootServletInitializer {
  
@@ -49,6 +50,7 @@ public class Chapter05Application extends SpringBootServletInitializer {
 这个类的作用与在web.xml中配置负责初始化Spring应用上下文的监听器作用类似，只不过在这里不需要编写额外的XML文件了。
 2、pom.xml修改tomcat相关的配置
 方法一：
+
 ```
 <dependency>
     <groupid>org.springframework.boot</groupid>
