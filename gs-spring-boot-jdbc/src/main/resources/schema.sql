@@ -12,3 +12,5 @@ CREATE TABLE `t_student`
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 2
   DEFAULT CHARSET = utf8;
+
+
