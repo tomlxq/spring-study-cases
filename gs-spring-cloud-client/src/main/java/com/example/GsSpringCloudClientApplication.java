@@ -9,7 +9,6 @@ public class GsSpringCloudClientApplication {
 
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(GsSpringCloudClientApplication.class);
-        // application.setBanner(Banner.Mode.OFF);
         application.run(args);
     }
 
