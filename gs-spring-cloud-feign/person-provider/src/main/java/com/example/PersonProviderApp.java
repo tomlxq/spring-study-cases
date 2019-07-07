@@ -15,6 +15,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrix
+// @Import(WebConfig.class)
 public class PersonProviderApp {
     public static void main(String[] args) {
         SpringApplication.run(PersonProviderApp.class, args);

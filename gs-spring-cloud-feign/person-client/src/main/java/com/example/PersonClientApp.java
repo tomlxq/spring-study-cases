@@ -21,6 +21,7 @@ import com.example.service.PersonService;
 @EnableFeignClients(clients = PersonService.class)
 @EnableEurekaClient
 @EnableHystrix
+// @Import(WebConfig.class)
 // @RibbonClient(value = "person-provider", configuration = PersonClientApp.class)
 public class PersonClientApp {
     public static void main(String[] args) {
