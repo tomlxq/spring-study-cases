@@ -10,6 +10,10 @@ Google Dapper
 
 ## 基本概念
 
+sleuth 问题排查，调用链路跟踪，性能问题
+
+> 了解一下opentsdb
+
 1. **Span**: The basic unit of work
 
 2. **Trace:** A set of spans forming a tree-like structure.
@@ -18,9 +22,13 @@ Google Dapper
 
    ![1562472317587](img\sleuth.png)
 
-
+通过trance Id查找链路，通过span Id 定位环节
 
 ## zipkin服务器
+
+https://zipkin.io/pages/quickstart.html
+
+> zipkin用来收集上报的日志信息
 
 ### 下载`zipkin-server-2.15.0-exec.jar`
 
@@ -34,18 +42,52 @@ Google Dapper
 
 `http://localhost:9411`
 
-## 配置`sleuth`
+## 创建zipkin服务器
 
-### 引入Maven依赖
+#### 增加maven依赖
+
+```xml
+ <dependency>
+     <groupId>io.zipkin.java</groupId>
+     <artifactId>zipkin-server</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.zipkin.java</groupId>
+    <artifactId>zipkin-autoconfigure-ui</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+#### 激活zipkin服务器
+
+```java
+@SpringBootApplication
+@EnableZipkinServer
+public class GsSpringCloudZipkinApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(GsSpringCloudZipkinApplication.class, args);
+    }
+}
+```
+
+
+
+## Http收集（Http调用）
+
+### 整合`spring-cloud-sleuth`
+
+#### 引入Maven依赖
 
 ```xml
 <dependency>
      <groupId>org.springframework.cloud</groupId>
      <artifactId>spring-cloud-starter-sleuth</artifactId>
 </dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
 ```
-
-
 
 引入后，日志会发生变化
 
@@ -53,35 +95,99 @@ Google Dapper
 >
 > MDC: <https://logback.qos.ch/manual/mdc.html>
 
+![1562599538895](img\big_sleuth.png)
 
+> 启动服务
+>
+> 1. `spring-cloud-sleuth` 20000
+> 2. `spring-cloud-eureka-server` 9090
+> 3. `spring-cloud-config` 10000
+> 4. `person-provider` 7070
+> 5. `person-client` 8080
+> 6. `spring-cloud-zuul` 6060
 
-## Http收集（Http调用）
+#### 激活Eureka
 
-### 增加maven依赖
+```java
+@SpringBootApplication
+@EnableDiscoveryClient
+public class GsSpringCloudSleuthApplication {
 
-```xml
-<dependency>
-  <groupId>org.springframework.cloud</groupId>
-  <artifactId>spring-cloud-starter-zipkin</artifactId>
-</dependency>
+    public static void main(String[] args) {
+        SpringApplication.run(GsSpringCloudSleuthApplication.class, args);
+    }
+    @LoadBalanced
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
 ```
 
-### 增加zipkin服务器地址
+#### 增加zipkin服务器地址
 
 ```properties
+spring.application.name=spring-cloud-sleuth
+server.port=20000
+# 安全失效
+spring.management.security.enabled=false
+management.endpoint.health.show-details=always
+management.endpoints.web.exposure.include=*
+management.endpoints.web.base-path=/
+# 注册到eureka服务器
+eureka.client.serviceUrl.defaultZone=\
+  http://localhost:9090/eureka
 # 增加zipkin的服务器地址
 spring.zipkin.discovery-client-enabled=true
 spring.zipkin.enabled=true
-spring.zipkin.base-url=http://localhost:30000
+#zipkin的服务器配置
+zipkin.server.host=localhost
+zipkin.server.port=9411
+spring.zipkin.base-url=http://${zipkin.server.host}:${zipkin.server.port}
 ```
 
 > 手工用命令输填入值
 >
 > `curl -XPOST http://localhost:6060/person-client/person/save -H "content-type:application/json;charset=UTF-8" -d '{"id":15,"name":"testit"}'`
 
-### `spring-cloud-zuul`(6060)上报zipkin服务器
+#### 调整`spring-cloud-sleuth`代码
 
-#### 增加maven依赖
+```java
+@RestController
+@Slf4j
+public class DemoController {
+    @Autowired
+    public DemoController(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    private final RestTemplate restTemplate;
+
+    @GetMapping("/demo")
+    public String index() {
+        String message = "Hello, Tom";
+        log.info("{} message {}", getClass().getName(), message);
+        return message;
+    }
+
+    /**
+     * http://localhost:20000/zuul/person-client/person/findAll
+     * 调用链路 sleuth(20000)->zuul(6060)->person-client(8080)->person-provider(7070)
+     * 
+     * @return
+     */
+    @GetMapping("/zuul/person-client/person/findAll")
+    public Object toZuul() {
+        log.info("DemoController#toZuul()");
+        String url = "http://spring-cloud-zuul/person-client/person/findAll";
+        return restTemplate.getForObject(url, Object.class);
+    }
+}
+```
+
+#### 调整zuul、client、provider上报zipkin服务器
+
+##### 增加maven依赖
 
 ```xml
  <dependency>
@@ -90,7 +196,7 @@ spring.zipkin.base-url=http://localhost:30000
 </dependency>
 ```
 
-#### 增加zipkin的服务器地址
+##### 增加zipkin的服务器地址
 
 ```properties
 #zipkin的服务器配置
@@ -99,7 +205,7 @@ zipkin.server.port=9411
 spring.zipkin.base-url=http://${zipkin.server.host}:${zipkin.server.port}
 ```
 
-#### 观察traceId
+##### 观察traceId
 
 `person-provider`(7070)
 
@@ -120,6 +226,68 @@ spring.zipkin.base-url=http://${zipkin.server.host}:${zipkin.server.port}
 > sleuth->zuul(config)->person-client(可能会hystrix)->person-provider
 
 ## spring cloud stream收集(消息)
+
+### 调整`spring-cloud-zipkin`,通过`stream`来收集
+
+> `mvn -Dmaven.test.skip -U clean package`
+
+##### 增加maven依赖
+
+```xml
+<!-- zipkip服务器通过stream收集跟踪信息-->
+<dependency>
+ <groupId>org.springframework.cloud</groupId>
+ <artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+</dependency>
+<!-- 使用kafka作为stream服务器-->
+<dependency>
+ <groupId>org.springframework.cloud</groupId>
+ <artifactId>spring-cloud-stream-binder-kafka</artifactId>
+</dependency>
+```
+
+##### 激活stream
+
+```java
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableZipkinStreamServer
+public class GsSpringCloudZipkinApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(GsSpringCloudZipkinApplication.class, args);
+    }
+}
+```
+
+##### 其它需要通过`kafka`上报，增加依赖
+
+```xml
+<!-- zipkip服务器通过stream收集跟踪信息-->
+<dependency>
+ <groupId>org.springframework.cloud</groupId>
+ <artifactId>spring-cloud-starter-sleuth</artifactId>
+</dependency>
+<dependency>
+ <groupId>org.springframework.cloud</groupId>
+ <artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+</dependency>
+<!-- 使用kafka作为stream服务器-->
+<dependency>
+ <groupId>org.springframework.cloud</groupId>
+ <artifactId>spring-cloud-stream-binder-kafka</artifactId>
+</dependency>
+```
+
+> 把之前上报Http URL 注释掉：
+>
+> ```xml
+> #zipkin的服务器配置
+> zipkin.server.host=localhost
+> zipkin.server.port=9411
+> spring.zipkin.base-url=http://${zipkin.server.host}:${zipkin.server.port}
+> ```
+
+
 
 
 
