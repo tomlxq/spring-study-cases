@@ -12,3 +12,13 @@ CREATE TABLE `t_student`
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 2
   DEFAULT CHARSET = utf8;
+
+drop table if exists `person`;
+CREATE TABLE `person`
+(
+    `ID`   int(10)      NOT NULL AUTO_INCREMENT,
+    `NAME` varchar(100) NOT NULL,
+    PRIMARY KEY (`ID`)
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 0
+  DEFAULT CHARSET = utf8;
