@@ -1,6 +1,8 @@
 Vagrant是一个虚拟机管理软件，需要结合虚拟机软件来使用。使用Vagrant能迅速创建批量虚拟机环境。对于做实验的同学来说，可以说是利器。
 官网地址：www.vagrantup.com
 
+https://www.vagrantup.com/downloads.html
+
 Vagrant的基本工作原理大致如下：
 
 首先，通过读取配置文件，获知用户需要的环境的操作系统、网络配置、基础软件等信息；

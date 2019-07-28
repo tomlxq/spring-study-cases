@@ -23,4 +23,9 @@ public class HelloWorldDemo {
     private void methodTwo() {
         File file = new File("");
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        // 增加指向
+    }
 }

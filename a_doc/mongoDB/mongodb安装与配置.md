@@ -1,4 +1,5 @@
 ## 添加MongoDB源
+https://mongodb.github.io/mongo-java-driver/
 cat /etc/yum.repos.d/mongodb-org.repo 
 [mongodb-org-4.0]
 name=MongoDB Repository
