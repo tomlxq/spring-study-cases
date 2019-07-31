@@ -469,3 +469,8 @@ java.lang.OutOfMemoryError: Java heap space
 
 
 ![1564296407640](img/参数设置.png)
+
+
+## References：
+1. [VM参数](http://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html)
+2. [从实际案例聊聊Java应用的GC优化](从实际案例聊聊Java应用的GC优化.pdf)

@@ -70,6 +70,9 @@
         <module>gs-spring-boot-mybatis</module>
         <module>gs-spring-mongo</module>
         <module>gs-spring-mult-mongodb</module>
+        <module>tomcat-war-demo</module>
+        <module>annotation-driven-demo</module>
+        <module>spring-webmvc-autoconfig</module>
     </modules>
     <!-- <dependencies>
          <dependency>
