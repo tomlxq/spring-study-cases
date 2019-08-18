@@ -1,43 +1,59 @@
-# 项目实践与学习
+# 总结
+[TOC]
+
   ## 工程构建
 
-  [1.工程专题之maven](a_doc/maven/1.工程专题之maven.md)
+### [1.工程专题之maven](a_doc/maven/1.工程专题之maven.md)
 
-  [2.工程专题之maven](a_doc/maven/2.工程专题之maven.md)
+* maven安装配置
+* setting元素解读
+* pom文件解读
+* maven的生命周期
 
-  [3.工程化专题之Git](a_doc/git/3.工程化专题之Git.md)
+### [2.工程专题之maven](a_doc/maven/2.工程专题之maven.md)
 
-  [3.工程化专题之jenkins](a_doc/jenkins/4.工程化专题之Jenkins.md)
+* 插件（自定插件，常用插件）
+* 版本管理
+* Profile
+* Nexus私服
+* 自定义archetype
+* 常用命令
 
-## 一、spring mvc学习
+### [3.工程化专题之Git](a_doc/git/3.工程化专题之Git.md)
 
-* [springmvc媒体类型处理](gs-spring-boot-rest/springmvc媒体类型处理.md)
+### [4.工程化专题之Jenkins](a_doc/jenkins/4.工程化专题之Jenkins.md)
 
-* [SpringBoot的启动方式](gs-spring-boot-rest/SpringBoot的启动方式.md)
+## spring源码学习
 
+### [1.Spring源码分析](a_doc/spring/1.spring源码分析)
 
-  ### Java 8 异步并发编程
-
-  ### Java 9 异步并发编程
-
-  ### 异步事件驱动Web开发
-
-  ### 高并发Reactor Streams编程之Reactor
-
-  ## Sprint boot系列
-
-  ### 深入浅出Spring Boot 管控
-
-  ### 深入浅出Spring Boot日志
-
-  ### 微服务实践之路
-
-  
-
-  
+* SpringBean, IOC, DI, AOP的概念原理
+* Spring中的设置模式
 
 
-# spring-study-cases
+
+springmvc媒体类型处理](gs-spring-boot-rest/springmvc媒体类型处理.md)
+
+[SpringBoot的启动方式](gs-spring-boot-rest/SpringBoot的启动方式.md)
+
+Java 8 异步并发编程
+
+Java 9 异步并发编程
+
+异步事件驱动Web开发
+
+高并发Reactor Streams编程之Reactor
+
+Sprint boot系列
+
+深入浅出Spring Boot 管控
+
+深入浅出Spring Boot日志
+
+微服务实践之路
+
+
+
 学习spring的测试代码
 Plan:
 https://github.com/auser/ng-newsletter-beginner-series.git
@@ -53,3 +69,4 @@ https://spring.io/guides/tutorials/bookmarks/
 
 
 https://www.bswen.com/springboot/2/
+
