@@ -1,4 +1,6 @@
-# Linux下安装MySQL数据库(压缩包方式安装)
+# Mysql安装与配置
+
+## Linux下安装MySQL数据库(压缩包方式安装)
 
 1、这里我将Mysql安装在/usr/local/mysql目录里面，也可以安装在其他地方;
 
@@ -39,19 +41,29 @@ cp -a ./support-files/my-default.cnf /etc/my.cnf (选择y)
 复制代码
 cp -a ./support-files/mysql.server /etc/init.d/mysqld
 修改my.cnf文件
-# These are commonly set, remove the # and set as required.
+
+These are commonly set, remove the # and set as required.
+
 basedir = /usr/local/mysql
 datadir = /usr/local/mysql/data
 port = 3306
-# server_id = .....
+
+server_id = .....
+
 socket = /tmp/mysql.sock
 character-set-server = utf8
-# Remove leading # to set options mainly useful for reporting servers.
-# The server defaults are faster for transactions and fast SELECTs.
-# Adjust sizes as needed, experiment to find the optimal values.
-# join_buffer_size = 128M
-# sort_buffer_size = 2M
-# read_rnd_buffer_size = 2M 
+
+Remove leading # to set options mainly useful for reporting servers.
+
+The server defaults are faster for transactions and fast SELECTs.
+
+Adjust sizes as needed, experiment to find the optimal values.
+
+join_buffer_size = 128M
+
+sort_buffer_size = 2M
+
+read_rnd_buffer_size = 2M 
 
 chmod +x /etc/init.d/mysqld    
 [root@localhost support-files]# chkconfig --add mysqld
@@ -69,7 +81,9 @@ service mysqld start
 mysql5.7会生成一个初始化密码，在root中.mysql_secret文件中。
 
 [root@localhost ~]# cat /root/.mysql_secret
-# Password set for user 'root@localhost' at 2017-03-16 00:52:34 
+
+Password set for user 'root@localhost' at 2017-03-16 00:52:34 
+
 ws;fmT7yh0CM
 12、登录并修改密码
 
@@ -94,9 +108,34 @@ mysql> show databases;
 复制代码
 OK
 
-
 source /etc/profile
 export PATH=$PATH:/usr/local/mysql/bin:/usr/local/mysql/lib
 echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/usr/local/mysql/bin:/usr/local/mysql/lib
 mysql -uroot -p
+
+
+
+## Issuers
+
+### 1. The server time zone value 'EDT' is unrecognized or represents more than one time zone.
+
+终端显示的时间和MySql中显示的时间不一致，这就是问题所在。
+
+使用 `server mysql start`命令启动mysql
+
+在mysql中执行`show variables like '%time_zone%';`
+
+输入`select nows();`
+
+在终端执行`date`命令
+
+在mysql中执行 `set time_zone=SYSTEM;`
+
+执行 `set global time_zone='+8:00';`
+
+执行 `flush privileges;`
+
+### 2. 显示创建表结构
+
+`show create table t_user\G;`
