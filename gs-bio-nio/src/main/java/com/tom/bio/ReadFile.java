@@ -1,6 +1,5 @@
 package com.tom.bio;
 
-
 import org.apache.commons.io.IOUtils;
 
 import java.io.BufferedReader;
@@ -29,6 +28,5 @@ public class ReadFile {
             IOUtils.closeQuietly(resourceAsStream);
         }
     }
-
 
 }

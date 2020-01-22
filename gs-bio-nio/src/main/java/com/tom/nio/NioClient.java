@@ -1,6 +1,7 @@
 package com.tom.nio;
 
-import org.apache.commons.lang3.StringUtils;
+import static com.tom.nio.NioServer.CHARSET;
+import static com.tom.nio.NioServer.SPLIT_SEP;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -12,13 +13,11 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
-import static com.tom.nio.NioServer.CHARSET;
-import static com.tom.nio.NioServer.SPLIT_SEP;
+import org.apache.commons.lang.StringUtils;
 
 public class NioClient {
     private final InetSocketAddress sockAddress = new InetSocketAddress("localhost", 8080);
-    Selector selector = null;
-    ;
+    Selector selector = null;;
     private String nickname = null;
     SocketChannel client = null;
 
@@ -47,7 +46,8 @@ public class NioClient {
                 while (scanner.hasNextLine()) {
 
                     String line = scanner.nextLine();
-                    if (StringUtils.isEmpty(line)) continue;
+                    if (StringUtils.isEmpty(line))
+                        continue;
                     if (StringUtils.equals("", nickname)) {
                         nickname = line;
                         line = nickname + SPLIT_SEP;
@@ -55,7 +55,6 @@ public class NioClient {
                         line = nickname + SPLIT_SEP + line;
                     }
                     client.write(CHARSET.encode(line));
-
 
                 }
                 scanner.close();
@@ -65,21 +64,19 @@ public class NioClient {
 
         }
 
-
     }
 
     private class Read extends Thread {
-
 
         @Override
         public void run() {
             try {
                 while (true) {
 
-
                     int select = selector.select();
 
-                    if (select == 0) return;
+                    if (select == 0)
+                        return;
                     Set<SelectionKey> keys = selector.selectedKeys();
                     Iterator<SelectionKey> iterator = keys.iterator();
                     while (iterator.hasNext()) {
@@ -87,7 +84,6 @@ public class NioClient {
                         iterator.remove();
                         process(next);
                     }
-
 
                 }
             } catch (IOException e) {
@@ -98,9 +94,10 @@ public class NioClient {
 
         private void process(SelectionKey key) throws IOException {
 
-            if (!key.isReadable()) return;
+            if (!key.isReadable())
+                return;
             ByteBuffer allocate = ByteBuffer.allocate(1024);
-            SocketChannel channel = (SocketChannel) key.channel();
+            SocketChannel channel = (SocketChannel)key.channel();
             String content = new String();
             while (channel.read(allocate) > 0) {
                 allocate.flip();
@@ -114,6 +111,5 @@ public class NioClient {
             key.interestOps(SelectionKey.OP_READ);
         }
     }
-
 
 }
