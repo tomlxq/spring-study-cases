@@ -28,7 +28,8 @@
         <profile>
             <id>default-first</id>
             <modules>
-                <module>spring-security-and-angular-js</module>
+                <module>interview</module>
+                <!--<module>spring-security-and-angular-js</module>
                 <module>bookmarks</module>
                 <module>gs-rest-war</module>
                 <module>spring-internationalization</module>
@@ -57,7 +58,6 @@
                 <module>gs-jms-kafka</module>
                 <module>gs-redis</module>
                 <module>gs-ecommerce</module>
-
                 <module>spring-mvc-demo</module>
                 <module>gs-bio-nio</module>
                 <module>gs-dubbo-tx</module>
@@ -67,7 +67,7 @@
                 <module>gs-spring-mult-mongodb</module>
                 <module>tomcat-war-demo</module>
                 <module>annotation-driven-demo</module>
-                <module>spring-webmvc-autoconfig</module>
+                <module>spring-webmvc-autoconfig</module>-->
             </modules>
         </profile>
     </profiles>

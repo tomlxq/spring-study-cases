@@ -1,3 +1,23 @@
+1. idea无法创建class，提示以下错误： Unable to parse template
+   <br>Settings->Editor->File and Code Templates
+   ```
+   #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+   #parse("File Header.java")
+   public interface ${NAME} {
+   }
+   ```
+   ```
+   #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+   #parse("File Header.java")
+   public class ${NAME} {
+   }
+   ```
+2. Jetbrains 全家桶正版激活码
+   https://blog.lupf.cn/articles/2022/10/08/1665160333637.html
+   `F5TRIB85C7-eyJsaWNlbnNlSWQiOiJGNVRSSUI4NUM3IiwibGljZW5zZWVOYW1lIjoiU2hhbmRvbmcgVW5pdmVyc2l0eSIsImFzc2lnbmVlTmFtZSI6ImFvIGxpIiwiYXNzaWduZWVFbWFpbCI6IjI4Njc4MTYyNjhAcXEuY29tIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbmFsIHVzZSBvbmx5IiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJEUE4iLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQUyIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTQyIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTRiIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJEUyIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNWIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IkRDIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSU1UiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRQIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBEQiIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQV1MiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFNJIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBQUyIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQQ1dNUCIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQR08iLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFBDIiwicGFpZFVwVG8iOiIyMDIzLTA0LTE4IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBSQiIsInBhaWRVcFRvIjoiMjAyMy0wNC0xOCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU1ciLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUlMiLCJwYWlkVXBUbyI6IjIwMjMtMDQtMTgiLCJleHRlbmRlZCI6dHJ1ZX1dLCJtZXRhZGF0YSI6IjAxMjAyMjA3MTVMUEFBMDA2MDA4IiwiaGFzaCI6IjMzMjc1MzQ1LzE2OTgzMDkyOjE3NTA1Njk2NTMiLCJncmFjZVBlcmlvZERheXMiOjcsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-EOufLPiykodPlQXl6v9pAd7geesvSLDca88HhDihCP5LSabX33BwTVfkSQaLUah0qyH84Shzp2NZv+LZK2dTXwwF1XCYq/9Lmt3iwlFovsrifhrfTGQCEXrlyzigZdwl+cpKysVKS9DdVKQIl64L0xQkX1ZrjOhofWUMFrgNwqie1xNn9iSSnbh/NiZ0/b7kdfMukFX995RFNkPMCvqwrGpNLFHnPoiEGqIKCh+2o8YQaO7AxPHckOLZLAF+l5dIkiM7tFdICOBT/GCEEPXG2CsVoufNvGmkdSUPr6j6+EuMAv+0iBscxQrkjfqH3wED6jXR9Pjl/+6OGaT6T4YhJg==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCP4uk4SlVdA5nuA3DQC+NsEnZS9npFnO0zrmMWcz1++q2UWJNuGTh0rwi+3fUJIArfvVh7gNtIp93rxjtrQAuf4/Fa6sySp4c32MeFACfC0q+oUoWebhOIaYTYUxm4LAZ355vzt8YeDPmvWKxA81udqEk4gU9NNAOz1Um5/8LyR8SGsSc4EDBRSjcMWMwMkYSauGqGcEUK8WhfplsyF61lKSOFA6VmfUmeDK15rUWWLbOMKgn2cxFA98A+s74T9Oo96CU7rp/umDXvhnyhAXSukw/qCGOVhwKR8B6aeDtoBWQgjnvMtPgOUPRTPkPGbwPwwDkvAHYiuKJ7Bd2wH7rAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBAB2J1ysRudbkqmkUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/wi9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD`
+   `6GB1NZ1FVO-eyJsaWNlbnNlSWQiOiI2R0IxTloxRlZPIiwibGljZW5zZWVOYW1lIjoiU2hhYW54aSBVbml2ZXJzaXR5IG9mIFNjaWVuY2UgJiBUZWNobm9sb2d5IiwiYXNzaWduZWVOYW1lIjoiYmkgeGluZyIsImFzc2lnbmVlRW1haWwiOiJiaXhpbmc1NjM1QHByb3Rvbm1haWwuY29tIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbmFsIHVzZSBvbmx5IiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJEUE4iLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQUyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTQyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTRiIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJEUyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNWIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IkRDIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSU1UiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRQIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBEQiIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQV1MiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFNJIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBQUyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQQ1dNUCIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQR08iLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFBDIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBSQiIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU1ciLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUlMiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQiLCJleHRlbmRlZCI6dHJ1ZX1dLCJtZXRhZGF0YSI6IjAxMjAyMjA0MDhMUEFBMDA3MDA4IiwiaGFzaCI6IjI3Mjc3OTk0LzEzNzE5MDE1OjIxMTI3MTEwNDkiLCJncmFjZVBlcmlvZERheXMiOjcsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-oVa5+bNQtZ7lhNulEIjA6bATDq8AlUURiyLVQmgGEtwo64IGhsV3m1VNGT/siT1p7oRqDRUPIjHRoXKZETQBqZHb1VIfDyvuxLesFxN1u+HzcJY9ntdLolVaL0hRE6/F0rIzLYoLJkNoCoAuYRscc/UYy+ZWhf0JtPentDYJ3QFnrXeWjgbZFTvxI2b5ubq8FavYLUA0cgFIIN0QVBtaNB2qV+/QA7PYylqYPO4W9AGYbeNWjyZizdmGlqLh707LlJwen9xOaSJDB0eNYfIiCzxAGati+Jdg6mq2oiEXLBxwabGycd+bSIoZqjuTns/zWY5CfI68NbJaZMk8cAjCSQ==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCP4uk4SlVdA5nuA3DQC+NsEnZS9npFnO0zrmMWcz1++q2UWJNuGTh0rwi+3fUJIArfvVh7gNtIp93rxjtrQAuf4/Fa6sySp4c32MeFACfC0q+oUoWebhOIaYTYUxm4LAZ355vzt8YeDPmvWKxA81udqEk4gU9NNAOz1Um5/8LyR8SGsSc4EDBRSjcMWMwMkYSauGqGcEUK8WhfplsyF61lKSOFA6VmfUmeDK15rUWWLbOMKgn2cxFA98A+s74T9Oo96CU7rp/umDXvhnyhAXSukw/qCGOVhwKR8B6aeDtoBWQgjnvMtPgOUPRTPkPGbwPwwDkvAHYiuKJ7Bd2wH7rAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBAB2J1ysRudbkqmkUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/wi9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD`
+   `6GB1NZ1FVO-eyJsaWNlbnNlSWQiOiI2R0IxTloxRlZPIiwibGljZW5zZWVOYW1lIjoiU2hhYW54aSBVbml2ZXJzaXR5IG9mIFNjaWVuY2UgJiBUZWNobm9sb2d5IiwiYXNzaWduZWVOYW1lIjoiYmkgeGluZyIsImFzc2lnbmVlRW1haWwiOiJiaXhpbmc1NjM1QHByb3Rvbm1haWwuY29tIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbmFsIHVzZSBvbmx5IiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJEUE4iLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlBTIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJSU0MiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IkRNIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiUlNGIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiRFMiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJQQyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiQ0wiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlJTViIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IkRDIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In0seyJjb2RlIjoiRFAiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJQREIiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJQV1MiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJQU0kiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJQUFMiLCJwYWlkVXBUbyI6IjIwMjItMTAtMjQifSx7ImNvZGUiOiJQQ1dNUCIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlBHTyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlBQQyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlBSQiIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlBTVyIsInBhaWRVcFRvIjoiMjAyMi0xMC0yNCJ9LHsiY29kZSI6IlJTIiwicGFpZFVwVG8iOiIyMDIyLTEwLTI0In1dLCJoYXNoIjoiMjcyNzc5OTQvMTM3MTkwMTU6MjExMjcxMTA0OSIsImdyYWNlUGVyaW9kRGF5cyI6NywiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSwiaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlfQ==-Iis9JdAZGE6EqLizG6m1mpsYhFp7rUpVdNe6mI+bQYTRtTvQ3mec5WQUSs3QUt3HQIOn4EqlurbJ3rKZxBrWI8zOMxa/+sNdLZCKagJ7onU2v/puRCJplHE38NT4bgiFSBTJBQuTtrR4Vv6Xwak5fZJRmGO0zzu5xgbTpAsHY8feS6AmsWbAF2TrP0vvpsTprc3v3EIh+XC9bimmEeEhOrL7RHQuZD2tmIWQLBXpBczwnazZclqNT90AMhUawrjcbvr1hEIPozDC6NH+N24pRV3Jktsqu+eHesZdePf+uyWr1LZkKhh6CHvae0T3XN3Q51WoHjnP9J36b7GeXu3Vnw==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCP4uk4SlVdA5nuA3DQC+NsEnZS9npFnO0zrmMWcz1++q2UWJNuGTh0rwi+3fUJIArfvVh7gNtIp93rxjtrQAuf4/Fa6sySp4c32MeFACfC0q+oUoWebhOIaYTYUxm4LAZ355vzt8YeDPmvWKxA81udqEk4gU9NNAOz1Um5/8LyR8SGsSc4EDBRSjcMWMwMkYSauGqGcEUK8WhfplsyF61lKSOFA6VmfUmeDK15rUWWLbOMKgn2cxFA98A+s74T9Oo96CU7rp/umDXvhnyhAXSukw/qCGOVhwKR8B6aeDtoBWQgjnvMtPgOUPRTPkPGbwPwwDkvAHYiuKJ7Bd2wH7rAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBAB2J1ysRudbkqmkUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/wi9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD`
+
 一、String,StringBuffer, StringBuilder 的区别是什么？String为什么是不可变的？
 
 答：
@@ -28,7 +48,7 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 
 五、Tomcat，Apache，JBoss的区别？
 
-答：   
+答：
 
 1、Apache是Http服务器，Tomcat是web服务器，JBoss是应用服务器。
 
@@ -36,7 +56,7 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 
 六、GET，POST区别？
 
-答：   
+答：
 
 基础知识：Http的请求格式如下。
 
@@ -64,7 +84,7 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 
 七、Session, Cookie区别
 
-答：  
+答：
 
 1、Session由应用服务器维护的一个服务器端的存储空间；Cookie是客户端的存储空间，由浏览器维护。
 
@@ -78,7 +98,7 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 
 八、Servlet的生命周期
 
-答： 
+答：
 
 大致分为4部：Servlet类加载-->实例化-->服务-->销毁
 
@@ -102,8 +122,6 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 
 8、Servlet容器把HttpServlet的响应结果传回客户端。
 
-
-
 其中的3个方法说明了Servlet的生命周期：
 
 1、init()：负责初始化Servlet对象。
@@ -114,8 +132,7 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 
 十、Statement与PreparedStatement的区别,什么是SQL注入，如何防止SQL注入
 
-
-答：  
+答：
 
 1、PreparedStatement支持动态设置参数，Statement不支持。
 
@@ -128,206 +145,210 @@ ps：线程安全会带来额外的系统开销，所以StringBuilder的效率�
 5、PreparedStatement可防止Sql助于，更加安全，而Statement不行。
 什么是SQL注入： 通过sql语句的拼接达到无参数查询数据库数据目的的方法。
 
- 如将要执行的sql语句为 select * from table where name = "+appName+"，利用appName参数值的输入，来生成恶意的sql语句，如将['or'1'='1'] 传入可在数据库中执行。
+如将要执行的sql语句为 select * from table where name = "+appName+"
+，利用appName参数值的输入，来生成恶意的sql语句，如将['or'1'='1'] 传入可在数据库中执行。
 
- 因此可以采用PrepareStatement来避免Sql注入，在服务器端接收参数数据后，进行验证，此时PrepareStatement会自动检测，而Statement不行，需要手工检测。
- 
- 十一、sendRedirect, foward区别
- 
- 答：   
- 
- 1、foward是服务器端控制页面转向，在客户端的浏览器地址中不会显示转向后的地址；sendRedirect则是完全的跳转，浏览器中会显示跳转的地址并重新发送请求链接。
- 
- 原理：forward是服务器请求资源，服务器直接访问目标地址的URL，把那个URL的响应内容读取过来，然后再将这些内容返回给浏览器，浏览器根本不知道服务器发送的这些内容是从哪来的，所以地址栏还是原来的地址。
- 
- redirect是服务器端根据逻辑，发送一个状态码，告诉浏览器重新去请求的那个地址，浏览器会用刚才的所有参数重新发送新的请求。
- 
- 十二、关于JAVA内存模型，一个对象（两个属性，四个方法）实例化100次，现在内存中的存储状态，几个对象，几个属性，几个方法。
- 
- 答：   
- 
- 由于JAVA中new出来的对象都是放在堆中，所以如果要实例化100次，将在堆中产生100个对象，一般对象与其中的属性、方法都属于一个整体，但如果         属性和方法是静态的，就是用static关键字声明的，那么属于类的属性和方法永远只在内存中存在一份。
- 
- 详见：链接
- 
- 十三、谈谈Hibernate的理解，一级和二级缓存的作用，在项目中Hibernate都是怎么使用缓存的。
- 
- 答：
- 
- Hibernate是一个开发的对象关系映射框架（ORM）。它对JDBC进行了非常对象封装，Hibernate允许程序员采用面向对象的方式来操作关系数据库。
- 
- Hibernate的优点：
- 
- 1、程序更加面向对象
- 
- 2、提高了生产率
- 
- 3、方便移植
- 
- 4、无入侵性。
- 
- 缺点：
- 
- 1、效率比JDBC略差
- 
- 2、不适合批量操作
- 
- 3、只能配置一种关联关系
- 
- Hibernate有四种查询方式：
- 
- 1、get、load方法，根据id号查询对象。
- 
- 2、Hibernate query language
- 
- 3、标准查询语言
- 
- 4、通过sql查询
- 
- Hibernage工作原理：
- 
- 1、配置hibernate对象关系映射文件、启动服务器
- 
- 2、服务器通过实例化Configuration对象，读取hibernate.cfg.xml文件的配置内容，并根据相关的需求建好表以及表之间的映射关系。
- 
- 3、通过实例化的Configuration对象建立SeesionFactory实例，通过SessionFactory实例创建Session对象。
- 
- 4、通过Seesion对象完成数据库的增删改查操作。
- 
- Hibernate中的状态转移
- 
- 临时状态（transient）
- 
- 1、不处于session缓存中
- 
- 2、数据库中没有对象记录
- 
- java是如何进入临时状态的：1、通过new语句创建一个对象时。2、刚调用session的delete方法时，从seesion缓存中删除一个对象时。
- 
- 持久化状态(persisted)
- 
- 1、处于session缓存中
- 
- 2、持久化对象数据库中没有对象记录
- 
- 3、seesion在特定的时刻会保存两者同步
- 
- java如何进入持久化状态：1、seesion的save()方法。2、seesion的load().get()方法返回的对象。3、seesion的find()方法返回的list集合中存放的对象。4、Session的update().save()方法。
- 
- 流离状态（detached）
- 
- 1、不再位于session缓存中
- 
- 2、游离对象由持久化状态转变而来，数据库中还没有相应记录。
- 
- java如何进入流离状态：1、Session的close()。Session的evict()方法，从缓存中删除一个对象。
- 
+因此可以采用PrepareStatement来避免Sql注入，在服务器端接收参数数据后，进行验证，此时PrepareStatement会自动检测，而Statement不行，需要手工检测。
 
- 
- Hibernate中的缓存主要有Session缓存（一级缓存）和SessionFactory缓存（二级缓存，一般由第三方提供）。
- 
- 十四、反射讲一讲，主要是概念,都在哪需要反射机制，反射的性能，如何优化
- 
- 答：  
- 
- 反射机制的定义：
- 
- 是在运行状态中，对于任意的一个类，都能够知道这个类的所有属性和方法，对任意一个对象都能够通过反射机制调用一个类的任意方法，这种动态获取类信息及动态调用类对象方法的功能称为java的反射机制。
- 
- 反射的作用：
- 
- 1、动态地创建类的实例，将类绑定到现有的对象中，或从现有的对象中获取类型。
- 
- 2、应用程序需要在运行时从某个特定的程序集中载入一个特定的类
- 
- 十四、反射讲一讲，主要是概念,都在哪需要反射机制，反射的性能，如何优化
- 
- 答：  
- 
- 反射机制的定义：
- 
- 是在运行状态中，对于任意的一个类，都能够知道这个类的所有属性和方法，对任意一个对象都能够通过反射机制调用一个类的任意方法，这种动态获取类信息及动态调用类对象方法的功能称为java的反射机制。
- 
- 反射的作用：
- 
- 1、动态地创建类的实例，将类绑定到现有的对象中，或从现有的对象中获取类型。
- 
- 2、应用程序需要在运行时从某个特定的程序集中载入一个特定的类
- 
- 十六、对Spring的理解，项目中都用什么？怎么用的？对IOC、和AOP的理解及实现原理
- 
- 
- 答：  
- 
- Spring是一个开源框架，处于MVC模式中的控制层，它能应对需求快速的变化，其主要原因它有一种面向切面编程（AOP）的优势，其次它提升了系统性能，因为通过依赖倒置机制（IOC），系统中用到的对象不是在系统加载时就全部实例化，而是在调用到这个类时才会实例化该类的对象，从而提升了系统性能。这两个优秀的性能使得Spring受到许多J2EE公司的青睐，如阿里里中使用最多的也是Spring相关技术。
- 
- Spring的优点：
- 
- 1、降低了组件之间的耦合性，实现了软件各层之间的解耦。
- 
- 2、可以使用容易提供的众多服务，如事务管理，消息服务，日志记录等。
- 
- 3、容器提供了AOP技术，利用它很容易实现如权限拦截、运行期监控等功能。
- 
- Spring中AOP技术是设计模式中的动态代理模式。只需实现jdk提供的动态代理接口InvocationHandler，所有被代理对象的方法都由InvocationHandler接管实际的处理任务。面向切面编程中还要理解切入点、切面、通知、织入等概念。
- 
- Spring中IOC则利用了Java强大的反射机制来实现。所谓依赖注入即组件之间的依赖关系由容器在运行期决定。其中依赖注入的方法有两种，通过构造函数注入，通过set方法进行注入。
- 
- 十七、线程同步，并发操作怎么控制 
- 
- 答：   
- 
- Java中可在方法名前加关键字syschronized来处理当有多个线程同时访问共享资源时候的问题。syschronized相当于一把锁，当有申请者申请该
- 
- 资源时，如果该资源没有被占用，那么将资源交付给这个申请者使用，在此期间，其他申请者只能申请而不能使用该资源，当该资源被使用完成后将释放该资源上的锁，其他申请者可申请使用。
- 
- 并发控制主要是为了多线程操作时带来的资源读写问题。如果不加以空间可能会出现死锁，读脏数据、不可重复读、丢失更新等异常。
- 
- 并发操作可以通过加锁的方式进行控制，锁又可分为乐观锁和悲观锁。
- 
- 悲观锁：
- 
- 悲观锁并发模式假定系统中存在足够多的数据修改操作，以致于任何确定的读操作都可能会受到由个别的用户所制造的数据修改的影响。也就是说悲观锁假定冲突总会发生，通过独占正在被读取的数据来避免冲突。但是独占数据会导致其他进程无法修改该数据，进而产生阻塞，读数据和写数据会相互阻塞。
- 
- 乐观锁：
- 
- 乐观锁假定系统的数据修改只会产生非常少的冲突，也就是说任何进程都不大可能修改别的进程正在访问的数据。乐观并发模式下，读数据和写数据之间不会发生冲突，只有写数据与写数据之间会发生冲突。即读数据不会产生阻塞，只有写数据才会产生阻塞。
- 
- 十八、描述struts的工作流程
- 
- 答：   
- 
- 1、在web应用启动时，加载并初始化ActionServlet，ActionServlet从struts-config.xml文件中读取配置信息，将它们存放到各个配置对象中。
- 
- 2、当ActionServlet接收到一个客户请求时，首先检索和用户请求相匹配的ActionMapping实例，如果不存在，就返回用户请求路径无效信息。
- 
- 3、如果ActionForm实例不存在，就创建一个ActionForm对象，把客户提交的表单数据保存到ActionForm对象中。
- 
- 4、根据配置信息决定是否需要验证表单，如果需要，就调用ActionForm的validate()方法，如果ActionForm的validate()方法返回null或返回一个不包含ActionMessage的ActionErrors对象，就表示表单验证成功。
- 
- 5、ActionServlet根据ActionMapping实例包含的映射信息决定请求转发给哪个Action，如果相应的Action实例不存在，就先创建一个实例，然后调用Action的execute()方法。
- 
- 6、Action的execute()方法返回一个ActionForward对象，ActionServlet再把客户请求转发给ActionForward对象指向的JSP组件。
- 
- 7、ActionForward对象指向的JSP组件生成动态网页，返回给客户。
- 关于Cache(Ehcache,Memcached) 
- 十九、Tomcat的session处理，如果让你实现一个tomcatserver，如何实现session机制 
- 
- 答：   没有找到合适的答案。
- 答：
- 
-二十、关于Cache(Ehcache,Memcached) 
- 
- 
- 最近研究了一下缓存技术，主要比较了一下memcached和ehcache。 
- ehcache是纯java编写的，通信是通过RMI方式，适用于基于java技术的项目。 
- memcached服务器端是c编写的，客户端有多个语言的实现，如c，php（淘宝，sina等各大门户网站），python（豆瓣网），java（Xmemcached，spymemcached)。memcached服务器端是使用文本或者二进制通信的。memcached的 python客户端没有开源，其他语言的好像都开源了。另外我以前不明白为什么各大互联网公司都是使用memcached缓存，后来我明白了原因：因为各大门户网站以及淘宝是使用php编写的网站，memcached有php客户端，而ehcache是纯java。
- 
- 
+十一、sendRedirect, foward区别
+
+答：
+
+1、foward是服务器端控制页面转向，在客户端的浏览器地址中不会显示转向后的地址；sendRedirect则是完全的跳转，浏览器中会显示跳转的地址并重新发送请求链接。
+
+原理：forward是服务器请求资源，服务器直接访问目标地址的URL，把那个URL的响应内容读取过来，然后再将这些内容返回给浏览器，浏览器根本不知道服务器发送的这些内容是从哪来的，所以地址栏还是原来的地址。
+
+redirect是服务器端根据逻辑，发送一个状态码，告诉浏览器重新去请求的那个地址，浏览器会用刚才的所有参数重新发送新的请求。
+
+十二、关于JAVA内存模型，一个对象（两个属性，四个方法）实例化100次，现在内存中的存储状态，几个对象，几个属性，几个方法。
+
+答：
+
+由于JAVA中new出来的对象都是放在堆中，所以如果要实例化100次，将在堆中产生100个对象，一般对象与其中的属性、方法都属于一个整体，但如果
+属性和方法是静态的，就是用static关键字声明的，那么属于类的属性和方法永远只在内存中存在一份。
+
+详见：链接
+
+十三、谈谈Hibernate的理解，一级和二级缓存的作用，在项目中Hibernate都是怎么使用缓存的。
+
+答：
+
+Hibernate是一个开发的对象关系映射框架（ORM）。它对JDBC进行了非常对象封装，Hibernate允许程序员采用面向对象的方式来操作关系数据库。
+
+Hibernate的优点：
+
+1、程序更加面向对象
+
+2、提高了生产率
+
+3、方便移植
+
+4、无入侵性。
+
+缺点：
+
+1、效率比JDBC略差
+
+2、不适合批量操作
+
+3、只能配置一种关联关系
+
+Hibernate有四种查询方式：
+
+1、get、load方法，根据id号查询对象。
+
+2、Hibernate query language
+
+3、标准查询语言
+
+4、通过sql查询
+
+Hibernage工作原理：
+
+1、配置hibernate对象关系映射文件、启动服务器
+
+2、服务器通过实例化Configuration对象，读取hibernate.cfg.xml文件的配置内容，并根据相关的需求建好表以及表之间的映射关系。
+
+3、通过实例化的Configuration对象建立SeesionFactory实例，通过SessionFactory实例创建Session对象。
+
+4、通过Seesion对象完成数据库的增删改查操作。
+
+Hibernate中的状态转移
+
+临时状态（transient）
+
+1、不处于session缓存中
+
+2、数据库中没有对象记录
+
+java是如何进入临时状态的：1、通过new语句创建一个对象时。2、刚调用session的delete方法时，从seesion缓存中删除一个对象时。
+
+持久化状态(persisted)
+
+1、处于session缓存中
+
+2、持久化对象数据库中没有对象记录
+
+3、seesion在特定的时刻会保存两者同步
+
+java如何进入持久化状态：1、seesion的save()方法。2、seesion的load().get()方法返回的对象。3、seesion的find()
+方法返回的list集合中存放的对象。4、Session的update().save()方法。
+
+流离状态（detached）
+
+1、不再位于session缓存中
+
+2、游离对象由持久化状态转变而来，数据库中还没有相应记录。
+
+java如何进入流离状态：1、Session的close()。Session的evict()方法，从缓存中删除一个对象。
+
+Hibernate中的缓存主要有Session缓存（一级缓存）和SessionFactory缓存（二级缓存，一般由第三方提供）。
+
+十四、反射讲一讲，主要是概念,都在哪需要反射机制，反射的性能，如何优化
+
+答：
+
+反射机制的定义：
+
+是在运行状态中，对于任意的一个类，都能够知道这个类的所有属性和方法，对任意一个对象都能够通过反射机制调用一个类的任意方法，这种动态获取类信息及动态调用类对象方法的功能称为java的反射机制。
+
+反射的作用：
+
+1、动态地创建类的实例，将类绑定到现有的对象中，或从现有的对象中获取类型。
+
+2、应用程序需要在运行时从某个特定的程序集中载入一个特定的类
+
+十四、反射讲一讲，主要是概念,都在哪需要反射机制，反射的性能，如何优化
+
+答：
+
+反射机制的定义：
+
+是在运行状态中，对于任意的一个类，都能够知道这个类的所有属性和方法，对任意一个对象都能够通过反射机制调用一个类的任意方法，这种动态获取类信息及动态调用类对象方法的功能称为java的反射机制。
+
+反射的作用：
+
+1、动态地创建类的实例，将类绑定到现有的对象中，或从现有的对象中获取类型。
+
+2、应用程序需要在运行时从某个特定的程序集中载入一个特定的类
+
+十六、对Spring的理解，项目中都用什么？怎么用的？对IOC、和AOP的理解及实现原理
+
+答：
+
+Spring是一个开源框架，处于MVC模式中的控制层，它能应对需求快速的变化，其主要原因它有一种面向切面编程（AOP）的优势，其次它提升了系统性能，因为通过依赖倒置机制（IOC），系统中用到的对象不是在系统加载时就全部实例化，而是在调用到这个类时才会实例化该类的对象，从而提升了系统性能。这两个优秀的性能使得Spring受到许多J2EE公司的青睐，如阿里里中使用最多的也是Spring相关技术。
+
+Spring的优点：
+
+1、降低了组件之间的耦合性，实现了软件各层之间的解耦。
+
+2、可以使用容易提供的众多服务，如事务管理，消息服务，日志记录等。
+
+3、容器提供了AOP技术，利用它很容易实现如权限拦截、运行期监控等功能。
+
+Spring中AOP技术是设计模式中的动态代理模式。只需实现jdk提供的动态代理接口InvocationHandler，所有被代理对象的方法都由InvocationHandler接管实际的处理任务。面向切面编程中还要理解切入点、切面、通知、织入等概念。
+
+Spring中IOC则利用了Java强大的反射机制来实现。所谓依赖注入即组件之间的依赖关系由容器在运行期决定。其中依赖注入的方法有两种，通过构造函数注入，通过set方法进行注入。
+
+十七、线程同步，并发操作怎么控制
+
+答：
+
+Java中可在方法名前加关键字syschronized来处理当有多个线程同时访问共享资源时候的问题。syschronized相当于一把锁，当有申请者申请该
+
+资源时，如果该资源没有被占用，那么将资源交付给这个申请者使用，在此期间，其他申请者只能申请而不能使用该资源，当该资源被使用完成后将释放该资源上的锁，其他申请者可申请使用。
+
+并发控制主要是为了多线程操作时带来的资源读写问题。如果不加以空间可能会出现死锁，读脏数据、不可重复读、丢失更新等异常。
+
+并发操作可以通过加锁的方式进行控制，锁又可分为乐观锁和悲观锁。
+
+悲观锁：
+
+悲观锁并发模式假定系统中存在足够多的数据修改操作，以致于任何确定的读操作都可能会受到由个别的用户所制造的数据修改的影响。也就是说悲观锁假定冲突总会发生，通过独占正在被读取的数据来避免冲突。但是独占数据会导致其他进程无法修改该数据，进而产生阻塞，读数据和写数据会相互阻塞。
+
+乐观锁：
+
+乐观锁假定系统的数据修改只会产生非常少的冲突，也就是说任何进程都不大可能修改别的进程正在访问的数据。乐观并发模式下，读数据和写数据之间不会发生冲突，只有写数据与写数据之间会发生冲突。即读数据不会产生阻塞，只有写数据才会产生阻塞。
+
+十八、描述struts的工作流程
+
+答：
+
+1、在web应用启动时，加载并初始化ActionServlet，ActionServlet从struts-config.xml文件中读取配置信息，将它们存放到各个配置对象中。
+
+2、当ActionServlet接收到一个客户请求时，首先检索和用户请求相匹配的ActionMapping实例，如果不存在，就返回用户请求路径无效信息。
+
+3、如果ActionForm实例不存在，就创建一个ActionForm对象，把客户提交的表单数据保存到ActionForm对象中。
+
+4、根据配置信息决定是否需要验证表单，如果需要，就调用ActionForm的validate()方法，如果ActionForm的validate()
+方法返回null或返回一个不包含ActionMessage的ActionErrors对象，就表示表单验证成功。
+
+5、ActionServlet根据ActionMapping实例包含的映射信息决定请求转发给哪个Action，如果相应的Action实例不存在，就先创建一个实例，然后调用Action的execute()
+方法。
+
+6、Action的execute()方法返回一个ActionForward对象，ActionServlet再把客户请求转发给ActionForward对象指向的JSP组件。
+
+7、ActionForward对象指向的JSP组件生成动态网页，返回给客户。
+关于Cache(Ehcache,Memcached)
+十九、Tomcat的session处理，如果让你实现一个tomcatserver，如何实现session机制
+
+答： 没有找到合适的答案。
+答：
+
+二十、关于Cache(Ehcache,Memcached)
+
+最近研究了一下缓存技术，主要比较了一下memcached和ehcache。
+ehcache是纯java编写的，通信是通过RMI方式，适用于基于java技术的项目。
+memcached服务器端是c编写的，客户端有多个语言的实现，如c，php（淘宝，sina等各大门户网站），python（豆瓣网），java（Xmemcached，spymemcached)
+。memcached服务器端是使用文本或者二进制通信的。memcached的
+python客户端没有开源，其他语言的好像都开源了。另外我以前不明白为什么各大互联网公司都是使用memcached缓存，后来我明白了原因：因为各大门户网站以及淘宝是使用php编写的网站，memcached有php客户端，而ehcache是纯java。
+
 二一、sql的优化相关问题
 
-答：   这篇文章写的真心不错，值得仔细拜读，所以将其转载过来了。
-近期因工作需要，希望比较全面的总结下SQL SERVER数据库性能优化相关的注意事项，在网上搜索了一下,发现很多文章,有的都列出了上百条,但是仔细看发现，有很多似是而非或者过时(可能对SQL SERVER6.5以前的版本或者ORACLE是适用的)的信息，只好自己根据以前的经验和测试结果进行总结了。
+答： 这篇文章写的真心不错，值得仔细拜读，所以将其转载过来了。
+近期因工作需要，希望比较全面的总结下SQL
+SERVER数据库性能优化相关的注意事项，在网上搜索了一下,发现很多文章,有的都列出了上百条,但是仔细看发现，有很多似是而非或者过时(
+可能对SQL SERVER6.5以前的版本或者ORACLE是适用的)的信息，只好自己根据以前的经验和测试结果进行总结了。
 
 我始终认为，一个系统的性能的提高，不单单是试运行或者维护阶段的性能调优的任务，也不单单是开发阶段的事情，而是在整个软件生命周期都需要注意，进行有效工作才能达到的。所以我希望按照软件生命周期的不同阶段来总结数据库性能优化相关的注意事项。
 
@@ -665,13 +686,13 @@ A、字符串连接的例子
 
 9.     SET @NAMES = ISNULL(@NAMES+’,’,’’)+@NAME
 
-10.  FETCH NEXT FROM NAME_CURSOR  INTO @NAME
+10. FETCH NEXT FROM NAME_CURSOR INTO @NAME
 
-11.  END
+11. END
 
-12.  CLOSE NAME_CURSOR
+12. CLOSE NAME_CURSOR
 
-13.  DEALLOCATE NAME_CURSOR
+13. DEALLOCATE NAME_CURSOR
 
 可以如下修改，功能相同：
 
@@ -705,25 +726,23 @@ B、 用CASE WHEN 实现转换的例子
 
 9.     )
 
-10.  GO
+10. GO
 
-11.  CREATE TABLE 入库表(
+11. CREATE TABLE 入库表(
 
-12.  时间               DATETIME,
+12. 时间 DATETIME,
 
-13.  料号               VARCHAR(30),
+13. 料号 VARCHAR(30),
 
-14.  单位               INT,
+14. 单位 INT,
 
-15.  入库数量           NUMERIC(18,4),
+15. 入库数量 NUMERIC(18,4),
 
-16.  损坏数量           NUMERIC(18,4)
+16. 损坏数量 NUMERIC(18,4)
 
-17.  )
+17. )
 
-18.  GO
-
-
+18. GO
 
 其中，单位字段可以是0，1，2，分别代表主单位、单位1、单位2，很多计算需要统一单位，统一单位可以用游标实现：
 
@@ -745,35 +764,33 @@ B、 用CASE WHEN 实现转换的例子
 
 9.     BEGIN
 
-10.  IF @单位=1
+10. IF @单位=1
 
-11.  BEGIN
+11. BEGIN
 
-12.  SET @参数=(SELECT 单位1参数 FROM 料件表 WHERE 料号 =@料号)
+12. SET @参数=(SELECT 单位1参数 FROM 料件表 WHERE 料号 =@料号)
 
-13.  UPDATE 入库表 SET 数量=数量*@参数,损坏数量=损坏数量*@参数,单位=1 WHERE CURRENT OF CUR
+13. UPDATE 入库表 SET 数量=数量*@参数,损坏数量=损坏数量*@参数,单位=1 WHERE CURRENT OF CUR
 
-14.  END
+14. END
 
-15.  IF @单位=2
+15. IF @单位=2
 
-16.  BEGIN
+16. BEGIN
 
-17.  SET @参数=(SELECT 单位1参数 FROM 料件表 WHERE 料号 =@料号)
+17. SET @参数=(SELECT 单位1参数 FROM 料件表 WHERE 料号 =@料号)
 
-18.  UPDATE 入库表 SET 数量=数量*@参数,损坏数量=损坏数量*@参数,单位=1 WHERE CURRENT OF CUR
+18. UPDATE 入库表 SET 数量=数量*@参数,损坏数量=损坏数量*@参数,单位=1 WHERE CURRENT OF CUR
 
-19.  END
+19. END
 
-20.  FETCH NEXT FROM CUR INTO @料号,@单位
+20. FETCH NEXT FROM CUR INTO @料号,@单位
 
-21.  END
+21. END
 
-22.  CLOSE CUR
+22. CLOSE CUR
 
-23.  DEALLOCATE CUR
-
-
+23. DEALLOCATE CUR
 
 可以改写成：
 
@@ -795,15 +812,13 @@ B、 用CASE WHEN 实现转换的例子
 
 9.     END,
 
-10.  单位=1
+10. 单位=1
 
-11.  FROM入库表 A, 料件表 B
+11. FROM入库表 A, 料件表 B
 
-12.  WHERE    A.单位<>1      AND
+12. WHERE A.单位<>1 AND
 
-13.  A.料号=B.料号
-
-
+13. A.料号=B.料号
 
 C、 变量参与的UPDATE语句的例子
 
@@ -1033,7 +1048,7 @@ SELECT ID FROM T WITH(INDEX(索引名)) WHERE NUM=@NUM”
 
 7、 关于连接表的顺序或者条件的顺序的说法，经过测试，在SQL SERVER，这些顺序都是不影响性能的，这些说法可能是对ORACLE有效。
 
-二二、oracle中 rownum与rowid的理解，一千条记录我查200到300的记录怎么查？ 
+二二、oracle中 rownum与rowid的理解，一千条记录我查200到300的记录怎么查？
 
 答：详见：链接
 Oracle有3种分页处理语句
@@ -1045,30 +1060,30 @@ Oracle有3种分页处理语句
 a、查询原表，从原表中取出分页中需要的字段，并排序
 select ename ,sal from emp order by sal
 b、对a取到的内容进行rownum编号
-select a1.*,rownum rn from (select ename ,sal from emp order by sal) a1 
+select a1.*,rownum rn from (select ename ,sal from emp order by sal) a1
 c、添加分页结束行号
-select a1.*,rownum rn from (select ename ,sal from emp order by sal) a1  where  rownum<=300
+select a1.*,rownum rn from (select ename ,sal from emp order by sal) a1 where rownum<=300
 d、添加分页开始行号
-select a2.* 
-from (select a1.*,rownum rn from (select ename ,sal from emp order by sal) a1  where  rownum<=300) a2 
+select a2.*
+from (select a1.*,rownum rn from (select ename ,sal from emp order by sal) a1 where rownum<=300) a2
 where rn>=200
 d中的语句可以用作rownum分页的模板使用，使用时修改select ename ,sal from emp order by sal，开始行号，结束行号就可以了。
 
 分页就要先排序
 SELECT * FROM (
-        SELECT a.*, rownum rn
-        FROM (SELECT * FROM table_name ORDER BY col_name) a
-        WHERE rownum <= 300
+SELECT a.*, rownum rn
+FROM (SELECT * FROM table_name ORDER BY col_name) a
+WHERE rownum <= 300
 ) WHERE r >= 200
 
-如何查200到300行的记录，可以通过top关键字辅助：select top 100 * from table where id is not in (select top 200 id from table);
+如何查200到300行的记录，可以通过top关键字辅助：select top 100 * from table where id is not in (select top 200 id from
+table);
 
 查询n到m行记录的通用公式：select top m * from table where id is not in (select top n * from table)
 
+二四、 DB中索引原理，种类，使用索引的好处和问题是什么？
 
-二四、 DB中索引原理，种类，使用索引的好处和问题是什么？ 
-
-答：    经常需要修改的表不易对改变建立索引，因为数据库对索引进行维护需要额外的开销。对经常需要查询的大数据表需要建立索引，这样会增加
+答： 经常需要修改的表不易对改变建立索引，因为数据库对索引进行维护需要额外的开销。对经常需要查询的大数据表需要建立索引，这样会增加
 
 查询的效率。
 

@@ -22,7 +22,6 @@ public class MyTomcatHandler extends ChannelInboundHandlerAdapter {
             MyServlet servlet = new MyServlet();
             servlet.get(nettyRequest, nettyResponse);
         }
-        // super.channelRead(ctx, msg);
     }
 
     @Override
